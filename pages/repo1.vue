@@ -6,7 +6,7 @@ definePageMeta({
 const links = [{
   label: 'Content',
   icon: 'i-heroicons-book-open',
-  to: '/getting-started'
+  to: '/repo1'
 }, {
   label: 'Pull Requests',
   icon: 'i-heroicons-square-3-stack-3d',
