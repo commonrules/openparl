@@ -50,7 +50,7 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
   base: 'group relative w-full flex items-center gap-1.5 px-2.5 py-3.5 rounded-md font-medium text-sm focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 disabled:cursor-not-allowed disabled:opacity-75',
   before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50',
   after: 'after:absolute after:bottom-0 after:inset-x-2.5 after:block after:h-[2px] after:mt-2',
-  active: 'text-gray-900 dark:text-white after:bg-gradient-to-r after:from-gray-900 after:from-10% after:via-red-500 after:to-yellow-400 after: dark:after:bg-primary-400 after:rounded-full',
+  active: 'text-gray-900 dark:text-white after:stripe1 dark:after:bg-primary-400 after:rounded-full',
   inactive: 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white',
   label: 'truncate relative',
   icon: {
@@ -78,4 +78,7 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
   border-bottom: none;
 }
 
+.stripe1 {
+  background-color: red;
+}
 </style>
