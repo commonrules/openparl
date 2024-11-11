@@ -22,9 +22,9 @@ const links = [
   to: '/releases'
 }], [{
     label: 'Open in Patina',
-    labelClass: 'open-in-patina',
+    labelClass: 'bg-red-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md',
   }, {
-    icon: 'i-heroicons-plus'
+    icon: 'i-heroicons-heart'
   },{
     icon: 'i-heroicons-ellipsis-vertical'
    }]
@@ -86,10 +86,6 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
 <style scoped>
 .no-border {
   border-bottom: none;
-}
-
-.open-in-patina {
-  background-color: #813c3c;
 }
 
 </style>
