@@ -25,6 +25,7 @@ const links = [{
     </template>
 
     <template #left>
+      Home
     </template>
 
     <template #right>
