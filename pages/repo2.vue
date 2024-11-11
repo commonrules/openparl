@@ -12,7 +12,7 @@ definePageMeta({
 
 <div class="bg-slate-50">
 
-    <RepoNavigation />
+    <RepoNavigationMult />
 
 </div>
 
