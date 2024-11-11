@@ -67,7 +67,7 @@ function onContextMenu() {
   }
 }
 "
-class="no-border group"
+class="no-border group bg-slate-50"
 @contextmenu.prevent="onContextMenu"
 >
 
