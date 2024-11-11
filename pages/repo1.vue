@@ -83,7 +83,7 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
 
 <div class="pl-6 pt-8 pr-6" >
 
-  <table>
+  <table style="vertical-align: top;">
   <tr>
     <td colspan="3"><span class="font-bold text-gray-700">Art. 1</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
     <td></td>
