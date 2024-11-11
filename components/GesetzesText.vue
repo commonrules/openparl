@@ -179,6 +179,7 @@
 </tr>
 </table>
 <br>
+<div class="text-2xl font-semibold text-slate-600 mb-2">II. Die Grundrechte</div>
 <table>
 <tr>
   <td colspan="3"><span class="font-bold text-slate-700">Art. 2</span><span class="text-slate-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
