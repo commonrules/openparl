@@ -11,11 +11,9 @@ definePageMeta({
 
 
 <div class="bg-slate-50">
-  <div class="flex justify-center">
-    <div class="w-1/2l">
+
     <RepoNavigation />
-  </div>
-</div>
+
 </div>
 
 
