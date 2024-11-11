@@ -71,6 +71,8 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
 }
 " :links="links"  class="pl-5 bg-slate-50"/>
 
+
+<div class="stripe1">wd</div>
 </template>
 
 <style scoped>
@@ -79,6 +81,18 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
 }
 
 .stripe1 {
-  background-color: red;
+  background: linear-gradient(
+    to right, 
+    red,
+    red 20%,
+    orange 20%,
+    orange 40%,
+    yellowgreen 40%,
+    yellowgreen 60%,
+    lightblue 60%,
+    lightblue 80%,
+    purple 80%,
+    purple
+  );
 }
 </style>
