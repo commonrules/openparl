@@ -50,7 +50,7 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
   base: 'group relative w-full flex items-center gap-1.5 px-2.5 py-3.5 rounded-md font-medium text-sm focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 disabled:cursor-not-allowed disabled:opacity-75',
   before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50',
   after: 'after:absolute after:bottom-0 after:inset-x-2.5 after:block after:h-[2px] after:mt-2',
-  active: 'text-gray-900 dark:text-white after:stripe1 dark:after:bg-primary-400 after:rounded-full',
+  active: 'text-gray-900 dark:text-white after:bg-[linear-gradient(266deg,rgba(252,211,77,1)0%,rgba(252,211,77,1)33%,rgba(185,28,28,1)33%,rgba(185,28,28,1)66%,rgba(10,10,10,1)66%,rgba(10,10,10,1)100%)] dark:after:bg-primary-400 after:rounded-full',
   inactive: 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white',
   label: 'truncate relative',
   icon: {
@@ -72,7 +72,6 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
 " :links="links"  class="pl-5 bg-slate-50"/>
 
 
-<div class="stripe1">wd</div>
 </template>
 
 <style scoped>
@@ -80,19 +79,6 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
   border-bottom: none;
 }
 
-.stripe1 {
-  background: linear-gradient(
-    to right, 
-    red,
-    red 20%,
-    orange 20%,
-    orange 40%,
-    yellowgreen 40%,
-    yellowgreen 60%,
-    lightblue 60%,
-    lightblue 80%,
-    purple 80%,
-    purple
-  );
-}
+
+
 </style>
