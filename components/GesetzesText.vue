@@ -1,5 +1,5 @@
 <template>
-    <div class="pl-6 pt-8 pr-6 text-sm" >
+    <div class="pl-6 pt-4 pr-6 text-sm" >
 
 
 <div class="text-2xl font-semibold text-slate-600 mb-2">I. Die Grundrechte</div>
