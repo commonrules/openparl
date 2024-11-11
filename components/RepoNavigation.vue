@@ -49,7 +49,8 @@ const links = [
   class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
   />
   
-  
+  <div class="flex justify-center">
+    <div class="w-1/3">
   <UHorizontalNavigation :ui="{
     wrapper: 'relative w-full flex items-center justify-between',
     container: 'flex items-center min-w-0',
@@ -77,6 +78,8 @@ const links = [
     }
   }
   " :links="links"  class="pl-5 bg-slate-50"/>
+</div>
+</div>
   </template>
 
 <style scoped>
