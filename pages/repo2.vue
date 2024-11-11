@@ -87,7 +87,7 @@ definePageMeta({
 
 
   <div class="w-2/3">
-    <div>README</div>
+    <div><GesetzesText /></div>
   </div>
 
   </div>
