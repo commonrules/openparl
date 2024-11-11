@@ -27,7 +27,7 @@ definePageMeta({
   <div class="w-full xl:w-3/5 px-4">
     <!-- Main center content here -->
     <div class="border border-slate-100 rounded-2xl mt-5">
-      <div class="bg-slate-100 pl-5 py-2 rounded-tl-2xl rounded-tr-2xl">Rentenreform</div>
+      <div class="bg-slate-100 pl-5 py-2 rounded-tl-2xl rounded-tr-2xl"><span class="font-semibold pr-4">Bundestag</span>Rentenreform</div>
      <GesetzesText />
     </div>
   </div>
