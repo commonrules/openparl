@@ -10,12 +10,15 @@ definePageMeta({
 
 
 
-
-<div class="flex justify-center">
-
+<div class="bg-slate-50">
+  <div class="flex justify-center">
+    <div class="w-1/2l">
+    <RepoNavigation />
+  </div>
+</div>
 </div>
 
-<RepoNavigation />
+
 <div class="flex justify-center max-w-screen-xl mx-auto">
   <!-- Left Sidebar -->
   <div class="hidden lg:block lg:w-1/5">
@@ -25,6 +28,7 @@ definePageMeta({
   <!-- Center Content -->
   <div class="w-full lg:w-3/5 px-4">
     <!-- Main center content here -->
+
      <GesetzesText />
   </div>
 
