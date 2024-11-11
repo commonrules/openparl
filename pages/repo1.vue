@@ -24,7 +24,7 @@ definePageMeta({
   </div>
 
   <!-- Center Content -->
-  <div class="w-full lg:w-3/5 px-4">
+  <div class="w-full xl:w-3/5 px-4">
     <!-- Main center content here -->
 
      <GesetzesText />
