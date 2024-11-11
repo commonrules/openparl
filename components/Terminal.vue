@@ -5,7 +5,7 @@
   <div class="fixed bottom-0 w-full">
     <UCommandPalette
     :empty-state="null"
-    placeholder="Type something to see the empty label change"
+    placeholder="Crtl K to search, issue commands (find Norms) or ask model"
     class="bg-slate-50"
   />
   </div>
