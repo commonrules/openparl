@@ -22,9 +22,7 @@ const links = [
   to: '/releases'
 }], [{
     label: 'Open in Patina',
-    labelClass: 'bg-red-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md',
-    icon: 'i-heroicons-pencil-square-20-solid',
-    iconClass: 'bg-red-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md',
+    labelClass: 'bg-red-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md mb-0 mt-0',
   }, {
     icon: 'i-heroicons-heart'
   },{
@@ -60,7 +58,7 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
   inner: 'min-w-0',
   base: 'group relative w-full flex items-center gap-1.5 px-2.5 py-3.5 rounded-md font-medium text-sm focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 disabled:cursor-not-allowed disabled:opacity-75',
   before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50',
-  after: 'after:absolute after:bottom-0 after:inset-x-2.5 after:block after:h-[3px] after:mt-2',
+  after: 'after:absolute after:bottom-0 after:inset-x-2.5 after:block after:h-[2px] after:mt-2',
   active: 'text-gray-900 dark:text-white after:bg-[linear-gradient(266deg,rgba(252,211,77,1)0%,rgba(252,211,77,1)33%,rgba(220,38,38,1)33%,rgba(220,38,38,1)66%,rgba(10,10,10,1)66%,rgba(10,10,10,1)100%)] dark:after:bg-primary-400 after:rounded-full',
   inactive: 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white',
   label: 'truncate relative',
