@@ -70,13 +70,11 @@ function onContextMenu() {
 class="no-border group"
 @contextmenu.prevent="onContextMenu"
 >
-    <template #logo>
-      <Logo class="w-auto h-6" />
-    </template>
+
 
     <template #left>
 
-      
+      <Logo size="xs" class="opacity-70"/>
         <div class="hover:bg-slate-50 hover:rounded px-1">Bundestag</div>
         /
         <div class="hover:bg-slate-50 hover:rounded px-1">GG</div>
