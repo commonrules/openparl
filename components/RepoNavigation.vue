@@ -46,8 +46,10 @@ const links = [
   
   }"
   title="Grundgesetz für die Bundesrepublik Deutschland"
-  class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
+  class="pl-8 no-border mt-0 pt-0 pb-4 bg-slate-50"
   />
+
+
   
   <div class="2xl:flex 2xl:justify-end">
     <div class="2xl:w-1/3">
