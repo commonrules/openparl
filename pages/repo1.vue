@@ -16,25 +16,25 @@ definePageMeta({
 </div>
 
 <RepoNavigation />
-<div class="flex justify-center">
+<div class="flex justify-center max-w-screen-xl mx-auto">
   <!-- Left Sidebar -->
-  <div class="w-1/4 lg:w-1/5 hidden md:block"> <!-- Adjust width as needed -->
+  <div class="hidden lg:block lg:w-1/5">
     <!-- Left sidebar content here -->
-     
   </div>
 
   <!-- Center Content -->
-  <div class="w-full md:w-2/4 lg:w-3/5 px-4">
+  <div class="w-full lg:w-3/5 px-4">
     <!-- Main center content here -->
-
-    <GesetzesText />
+     <GesetzesText />
   </div>
 
   <!-- Right Sidebar -->
-  <div class="w-1/4 lg:w-1/5 hidden md:block">
+  <div class="hidden lg:block lg:w-1/5">
     <!-- Right sidebar content here -->
   </div>
 </div>
+
+
 
 </template>
 
