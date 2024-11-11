@@ -74,7 +74,7 @@ class="no-border group"
 
     <template #left>
 
-      <a href="/"><Logo size="xs" class="opacity-70" /></a>
+      <a href="/"><Logo size="xs" class="opacity-60" /></a>
         <div class="hover:bg-slate-50 hover:rounded px-1">Bundestag</div>
         /
         <div class="hover:bg-slate-50 hover:rounded px-1">GG</div>
@@ -85,7 +85,6 @@ class="no-border group"
       <UDropdown :items="items" mode="hover" :popper="{ placement: 'right-start' }">
         <UIcon name="i-heroicons-chevron-right" class=" w-4 h-4 opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
   </UDropdown>
-
 
 
     </template>
