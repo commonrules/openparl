@@ -29,7 +29,7 @@ definePageMeta({
       class="pt-1"
     />
     <span class="font-semibold pr-4 ml-4">Bundestag</span>
-    Rentenreform zur Beschleunigung der viele..<span class="pl-5 text-slate-400">27 Days ago</span>
+    Rentenreform zur Beschleunigung der vielen guten Di..<span class="pl-5 text-slate-400">27 Days ago</span>
   
 <span class="pl-5"><UIcon name="i-heroicons-arrow-path" class="w-3 h-3" /></span><span class="pl-2 font-semibold">53 Gesetzesänderungen</span></div>
 
