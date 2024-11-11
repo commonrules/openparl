@@ -22,6 +22,27 @@ const items = [
   }]
 ]
 
+import { useMouse, useWindowScroll } from '@vueuse/core'
+
+const { x, y } = useMouse()
+const { y: windowY } = useWindowScroll()
+
+const isOpen = ref(false)
+const virtualElement = ref({ getBoundingClientRect: () => ({}) })
+
+function onContextMenu() {
+  const top = unref(y) - unref(windowY)
+  const left = unref(x)
+
+  virtualElement.value.getBoundingClientRect = () => ({
+    width: 0,
+    height: 0,
+    top,
+    left
+  })
+
+  isOpen.value = true
+}
 </script>
 
 <template>
@@ -47,6 +68,7 @@ const items = [
 }
 "
 class="no-border group"
+@contextmenu.prevent="onContextMenu"
 >
     <template #logo>
       <Logo class="w-auto h-6" />
@@ -63,7 +85,7 @@ class="no-border group"
   
 
       <UDropdown :items="items" mode="hover" :popper="{ placement: 'right-start' }">
-        <UIcon name="i-heroicons-chevron-right" class=" w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <UIcon name="i-heroicons-chevron-right" class=" w-4 h-4 opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
   </UDropdown>
 
 
@@ -84,7 +106,11 @@ class="no-border group"
   </UHeader>
 
 
-  
+  <UContextMenu v-model="isOpen" :virtual-element="virtualElement">
+      <div class="p-4">
+        Also copy paste menu
+      </div>
+    </UContextMenu>
 
 
 
