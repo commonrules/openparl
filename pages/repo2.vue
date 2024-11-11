@@ -54,8 +54,9 @@ definePageMeta({
   </div>
 
 
-    
-
+  <div class="w-2/3">
+    <div>README</div>
+  </div>
 
   </div>
 
