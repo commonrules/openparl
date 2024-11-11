@@ -27,17 +27,17 @@ definePageMeta({
   <div class="w-full xl:w-3/5 px-4">
     <!-- Main center content here -->
     <div class="border-slate-100 rounded-2xl mt-5">
-      <div class="flex justify-start bg-slate-100 pl-5 py-4 rounded-tl-2xl rounded-tr-2xl"> 
+      <div class="flex justify-start bg-slate-100 text-sm pl-5 py-3 rounded-tl-2xl rounded-tr-2xl"> 
         <UAvatar
-      size="2xs"
+      size="3xs"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"
       alt="Avatar"
       class="pt-1"
     />
     <span class="font-semibold pr-4 ml-4">Bundestag</span>
-    Rentenreform zur Beschleunigun..<span class="pl-5 text-slate-400">27 Days ago</span>
+    Rentenreform zur Beschleunigung der viele..<span class="pl-5 text-slate-400">27 Days ago</span>
   
-<span class="pl-5"><UIcon name="i-heroicons-arrow-path" class="w-4 h-4" /></span><span class="pl-2 font-semibold">53 Gesetzesänderungen</span></div>
+<span class="pl-5"><UIcon name="i-heroicons-arrow-path" class="w-3 h-3" /></span><span class="pl-2 font-semibold">53 Gesetzesänderungen</span></div>
      <GesetzesText />
     </div>
   </div>
