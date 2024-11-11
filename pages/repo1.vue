@@ -3,8 +3,9 @@ definePageMeta({
   layout: 'repo'
 })
 
-const links = [{
-  label: 'Content',
+const links = [
+  [{
+  label: 'Gesetzestext',
   icon: 'i-heroicons-book-open',
   to: '/repo1'
 }, {
@@ -19,7 +20,14 @@ const links = [{
   label: 'Legislative Activity',
   icon: 'i-heroicons-rocket-launch',
   to: '/releases'
-}]
+}], [{
+    label: 'Open in Patina',
+  }, {
+    icon: 'i-heroicons-plus'
+  },{
+    icon: 'i-heroicons-ellipsis-vertical'
+   }]
+]
 
 </script>
 
