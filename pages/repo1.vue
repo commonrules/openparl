@@ -27,7 +27,15 @@ definePageMeta({
   <div class="w-full xl:w-3/5 px-4">
     <!-- Main center content here -->
     <div class="border border-slate-100 rounded-2xl mt-5">
-      <div class="bg-slate-100 pl-5 py-2 rounded-tl-2xl rounded-tr-2xl"><span class="font-semibold pr-4">Bundestag</span>Rentenreform</div>
+      <div class="flex justify-start bg-slate-100 pl-5 py-4 rounded-tl-2xl rounded-tr-2xl"> 
+        <UAvatar
+      size="2xs"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"
+      alt="Avatar"
+      class="pt-1"
+    />
+    <span class="font-semibold pr-4 ml-4">Bundestag</span>
+    Rentenreform</div>
      <GesetzesText />
     </div>
   </div>
