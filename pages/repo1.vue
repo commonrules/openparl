@@ -43,7 +43,21 @@ definePageMeta({
       alt="Avatar"
     />
   <div class="mx-4">Deutscher Bundestag</div>
+  
+  
+  
 </div>
+
+<div class="px-8 pb-5 font-semibold text-blue-600"><a href="google.com">projectwebsite.org</a></div>
+
+  <div class="px-8">
+    <div class="font-semibold">Model Introduction</div>
+    <div class="text-md">With the rapid development of artificial intelligence technology, large language models (LLMs) have made significant progress in fields such as natural language processing, computer vision, and scientific tasks. However, as the scale of these models increases, optimizing resource consumption while maintaining high performance has become a key challenge. </div>
+  </div>
+
+
+  <div></div>
+
 
 </div>
   </div>
