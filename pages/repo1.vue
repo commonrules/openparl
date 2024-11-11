@@ -22,7 +22,9 @@ const links = [
   to: '/releases'
 }], [{
     label: 'Open in Patina',
-    labelClass: 'bg-yellow-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md',
+    labelClass: 'bg-red-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md',
+    icon: 'i-heroicons-pencil-square-20-solid',
+    iconClass: 'bg-red-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md',
   }, {
     icon: 'i-heroicons-heart'
   },{
