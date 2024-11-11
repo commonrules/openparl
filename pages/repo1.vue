@@ -22,7 +22,7 @@ const links = [
   to: '/releases'
 }], [{
     label: 'Open in Patina',
-    labelClass: 'bg-red-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md mb-0 mt-0',
+    labelClass: 'bg-gray-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md mb-0 mt-0',
   }, {
     icon: 'i-heroicons-heart'
   },{
@@ -83,7 +83,7 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
 
 <div class="pl-6 pt-8 pr-6" >
 
-  <table style="vertical-align: top;">
+  <table >
   <tr>
     <td colspan="3"><span class="font-bold text-gray-700">Art. 1</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
     <td></td>
@@ -142,7 +142,180 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
     <td>In diese Rechte darf nur auf Grund eines Gesetzes eingegriffen werden..</td>
   </tr>
 </table>
-
+<br>
+<table>
+  <tr>
+    <td colspan="3"><span class="font-bold text-gray-700">Art. 2</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="pr-5">(1)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Jeder hat das Recht auf die freie Entfaltung seiner Persönlichkeit, soweit er nicht die Rechte anderer verletzt und nicht gegen die verfassungsmäßige Ordnung oder das Sittengesetz verstößt.</td>
+  </tr>
+  <tr style="height:10px"><td colspan="5"></td></tr>
+  <tr>
+    <td class="pr-5">(2)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Die Würde des Menschen ist unantastbar.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">²</span></td>
+    <td>Die Freiheit der Person ist unverletzlich.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">³</span></td>
+    <td>In diese Rechte darf nur auf Grund eines Gesetzes eingegriffen werden..</td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td colspan="3"><span class="font-bold text-gray-700">Art. 2</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="pr-5">(1)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Jeder hat das Recht auf die freie Entfaltung seiner Persönlichkeit, soweit er nicht die Rechte anderer verletzt und nicht gegen die verfassungsmäßige Ordnung oder das Sittengesetz verstößt.</td>
+  </tr>
+  <tr style="height:10px"><td colspan="5"></td></tr>
+  <tr>
+    <td class="pr-5">(2)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Die Würde des Menschen ist unantastbar.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">²</span></td>
+    <td>Die Freiheit der Person ist unverletzlich.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">³</span></td>
+    <td>In diese Rechte darf nur auf Grund eines Gesetzes eingegriffen werden..</td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td colspan="3"><span class="font-bold text-gray-700">Art. 2</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="pr-5">(1)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Jeder hat das Recht auf die freie Entfaltung seiner Persönlichkeit, soweit er nicht die Rechte anderer verletzt und nicht gegen die verfassungsmäßige Ordnung oder das Sittengesetz verstößt.</td>
+  </tr>
+  <tr style="height:10px"><td colspan="5"></td></tr>
+  <tr>
+    <td class="pr-5">(2)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Die Würde des Menschen ist unantastbar.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">²</span></td>
+    <td>Die Freiheit der Person ist unverletzlich.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">³</span></td>
+    <td>In diese Rechte darf nur auf Grund eines Gesetzes eingegriffen werden..</td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td colspan="3"><span class="font-bold text-gray-700">Art. 2</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="pr-5">(1)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Jeder hat das Recht auf die freie Entfaltung seiner Persönlichkeit, soweit er nicht die Rechte anderer verletzt und nicht gegen die verfassungsmäßige Ordnung oder das Sittengesetz verstößt.</td>
+  </tr>
+  <tr style="height:10px"><td colspan="5"></td></tr>
+  <tr>
+    <td class="pr-5">(2)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Die Würde des Menschen ist unantastbar.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">²</span></td>
+    <td>Die Freiheit der Person ist unverletzlich.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">³</span></td>
+    <td>In diese Rechte darf nur auf Grund eines Gesetzes eingegriffen werden..</td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td colspan="3"><span class="font-bold text-gray-700">Art. 2</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="pr-5">(1)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Jeder hat das Recht auf die freie Entfaltung seiner Persönlichkeit, soweit er nicht die Rechte anderer verletzt und nicht gegen die verfassungsmäßige Ordnung oder das Sittengesetz verstößt.</td>
+  </tr>
+  <tr style="height:10px"><td colspan="5"></td></tr>
+  <tr>
+    <td class="pr-5">(2)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Die Würde des Menschen ist unantastbar.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">²</span></td>
+    <td>Die Freiheit der Person ist unverletzlich.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">³</span></td>
+    <td>In diese Rechte darf nur auf Grund eines Gesetzes eingegriffen werden..</td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td colspan="3"><span class="font-bold text-gray-700">Art. 2</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="pr-5">(1)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Jeder hat das Recht auf die freie Entfaltung seiner Persönlichkeit, soweit er nicht die Rechte anderer verletzt und nicht gegen die verfassungsmäßige Ordnung oder das Sittengesetz verstößt.</td>
+  </tr>
+  <tr style="height:10px"><td colspan="5"></td></tr>
+  <tr>
+    <td class="pr-5">(2)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Die Würde des Menschen ist unantastbar.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">²</span></td>
+    <td>Die Freiheit der Person ist unverletzlich.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">³</span></td>
+    <td>In diese Rechte darf nur auf Grund eines Gesetzes eingegriffen werden..</td>
+  </tr>
+</table>
 
 
 
