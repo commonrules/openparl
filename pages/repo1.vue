@@ -35,7 +35,7 @@ definePageMeta({
       class="pt-1"
     />
     <span class="font-semibold pr-4 ml-4">Bundestag</span>
-    Rentenreform</div>
+    Rentenreform zur Beschleunigung der vielen gutenam zum Die..<span class="pl-5 text-slate-400">27 Days ago</span></div>
      <GesetzesText />
     </div>
   </div>
