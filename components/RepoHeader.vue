@@ -3,6 +3,24 @@ import type { NavItem } from '@nuxt/content'
 
 const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
 
+const items = [
+ [{
+    label: 'Normzitat',
+    icon: 'i-heroicons-pencil-square-20-solid',
+    shortcuts: ['E'],
+    click: () => {
+      console.log('Edit')
+    }
+  }, {
+    label: 'Link',
+    icon: 'i-heroicons-document-duplicate-20-solid',
+    shortcuts: ['D'],
+  }, {
+    label: 'Open in new tab',
+    icon: 'i-heroicons-document-duplicate-20-solid',
+    shortcuts: ['D'],
+  }]
+]
 
 </script>
 
@@ -28,16 +46,28 @@ const navigation = inject<Ref<NavItem[]>>('navigation', ref([]))
   }
 }
 "
-class="no-border"
+class="no-border group"
 >
     <template #logo>
       <Logo class="w-auto h-6" />
     </template>
 
     <template #left>
-        <div>Bundestag</div>
+
+      
+        <div class="hover:bg-slate-50 hover:rounded px-1">Bundestag</div>
         /
-        <div>GG</div>
+        <div class="hover:bg-slate-50 hover:rounded px-1">GG</div>
+        <div class="hover:bg-slate-50 hover:rounded px-1 text-slate-400">
+          Art. 1 Abs. 2 S. 1</div>
+  
+
+      <UDropdown :items="items" mode="hover" :popper="{ placement: 'right-start' }">
+        <UIcon name="i-heroicons-chevron-right" class=" w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+  </UDropdown>
+
+
+
     </template>
 
     <template #center>
