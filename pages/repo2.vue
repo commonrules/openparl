@@ -60,7 +60,7 @@ definePageMeta({
         <td class="ml-10 py-3">Rentenreform zur Beschleunigung der vielen guten Di..</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
       </tr>
-      <tr class="border-t border-slate-100">
+      <tr class="border-t border-slate-100 bg-slate-100">
         <td class="pl-5 py-3">
           
         </td>
