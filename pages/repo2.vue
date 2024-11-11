@@ -16,6 +16,9 @@ definePageMeta({
 
 </div>
 
+<div class="flex justify-between">
+
+<div class="w-1/3">
 
 <div class="border border-slate-100 rounded-2xl">
       <div class="flex justify-start bg-slate-100 text-sm pl-5 py-3"> 
@@ -47,13 +50,14 @@ definePageMeta({
   </tr>
      </table>
     </div>
-  
+
+  </div>
 
 
     
 
 
-  <div></div>
+  </div>
 
 
 
