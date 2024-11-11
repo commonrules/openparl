@@ -74,7 +74,7 @@ class="no-border group"
 
     <template #left>
 
-      <Logo size="xs" class="opacity-70"/>
+      <a href="/"><Logo size="xs" class="opacity-70" /></a>
         <div class="hover:bg-slate-50 hover:rounded px-1">Bundestag</div>
         /
         <div class="hover:bg-slate-50 hover:rounded px-1">GG</div>
