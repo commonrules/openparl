@@ -81,6 +81,29 @@ class="pl-8 no-border mt-0 pt-0 pb-5 bg-slate-50"
 " :links="links"  class="pl-5 bg-slate-50"/>
 
 
+<div class="pl-6 pt-8" >
+
+  <table>
+  <tr>
+    <td><span class="font-bold">Art. 1</span><span class="text-gray-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>(1)</td>
+    <td><span class="text-gray-400">¹</span></td>
+    <td>Die Würde des Menschen ist unantastbar.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td><span class="text-gray-400">²</span></td>
+    <td>Sie zu achten und zu schützen ist Verpflichtung aller staatlicen Gewalt.</td>
+  </tr>
+</table>
+
+</div>
+
+
 </template>
 
 <style scoped>
