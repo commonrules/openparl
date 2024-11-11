@@ -49,7 +49,7 @@ const links = [
   class="pl-8 no-border mt-0 pt-0 pb-0 bg-slate-50"
   />
   <div class="bg-slate-50 rounded-2xl">
-    <div class="flex justify-start px-8 mt-5 mb-5">
+    <div class="flex justify-start px-8 mt-6 mb-5">
 
       
   <UAvatar
