@@ -75,10 +75,10 @@ class="no-border group"
     <template #left>
 
       <a href="/"><Logo size="xs" class="opacity-60" /></a>
-        <div class="hover:bg-slate-50 hover:rounded px-1">Bundestag</div>
-        /
-        <div class="hover:bg-slate-50 hover:rounded px-1">GG</div>
-        <div class="hover:bg-slate-50 hover:rounded px-1 text-slate-400">
+        <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">Bundestag</div>
+       <div class="mb-1">/</div>
+        <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">GG</div>
+        <div class="hover:bg-slate-50 hover:rounded px-1 text-slate-400 mb-1">
           Art. 1 Abs. 2 S. 1</div>
   
 
