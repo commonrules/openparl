@@ -35,29 +35,48 @@ definePageMeta({
 
     </div>
 
-    <div class="border border-slate-100">
-      <div class="flex justify-start text-sm pl-5 py-3"> 
-        <UIcon name="i-heroicons-chevron-right" class="w-4 h-4" /><UIcon name="i-heroicons-folder" class="w-4 h-4" />
-    <span class="font-semibold pr-4 ml-4">FileSampleVeryLargeTBH_Final.md</span><span class="ml-10">
-    Rentenreform zur Beschleunigung der vielen guten Di..</span><span class="pl-5 text-slate-400">27 Days ago</span>
+    <div class="overflow-x-auto text-sm">
+  <table class="min-w-full border-collapse border border-slate-100">
+    <tbody>
+      <tr class="border-t border-slate-100">
+        <td class="pl-5 py-3">
+          <UIcon name="i-heroicons-chevron-right" class="w-4 h-4" />
+        </td>
+        <td class="pl-5 py-3">
+          <UIcon name="i-heroicons-folder" class="w-4 h-4" />
+        </td>
+        <td class="font-semibold pr-4 ml-4 py-3">FileSampleVeryLargeTBH_Final.md</td>
+        <td class="ml-10 py-3">Rentenreform zur Beschleunigung der vielen guten Di..</td>
+        <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
+      </tr>
+      <tr class="border-t border-slate-100">
+        <td class="pl-5 py-3">
+          <UIcon name="i-heroicons-chevron-right" class="w-4 h-4" />
+        </td>
+        <td class="pl-5 py-3">
+          <UIcon name="i-heroicons-document" class="w-4 h-4" />
+        </td>
+        <td class="font-semibold pr-4 ml-4 py-3">FileSampleVeryLargeTBH_Final.md</td>
+        <td class="ml-10 py-3">Rentenreform zur Beschleunigung der vielen guten Di..</td>
+        <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
+      </tr>
+      <tr class="border-t border-slate-100">
+        <td class="pl-5 py-3">
+          <UIcon name="i-heroicons-chevron-right" class="w-4 h-4" />
+        </td>
+        <td class="pl-5 py-3">
+          <UIcon name="i-heroicons-document" class="w-4 h-4" />
+        </td>
+        <td class="font-semibold pr-4 ml-4 py-3">FileSampleVeryLargeTBH_Final.md</td>
+        <td class="ml-10 py-3">Rentenreform zur Beschleunigung der vielen guten Di..</td>
+        <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-    </div>
 
-    <div class="border border-slate-100">
-      <div class="flex justify-start text-sm pl-5 py-3"> 
-        <UIcon name="i-heroicons-document" class="w-4 h-4" />
-    <span class="font-semibold pr-4 ml-4">FileSampleVeryLargeTBH_Final.md</span><span class="ml-10">
-    Rentenreform zur Beschleunigung der vielen guten Di..</span><span class="pl-5 text-slate-400">27 Days ago</span>
-</div>
-    </div>
 
-    <div class="border border-slate-100">
-      <div class="flex justify-start text-sm pl-5 py-3"> 
-        <UIcon name="i-heroicons-document" class="w-4 h-4" />
-    <span class="font-semibold pr-4 ml-4">FileSampleVeryLargeTBH_Final.md</span><span class="ml-10">
-    Rentenreform zur Beschleunigung der vielen guten Di..</span><span class="pl-5 text-slate-400">27 Days ago</span>
-</div>
-    </div>
+
 
 
 
