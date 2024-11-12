@@ -46,9 +46,9 @@ const links = [
   
   }"
   title="Grundgesetz für die Bundesrepublik Deutschland"
-  class="pl-8 no-border mt-0 pt-0 pb-0 bg-slate-50"
+  class="pl-8 no-border mt-0 pt-0 pb-0 bg-slate-50 dark:bg-gray-800"
   />
-  <div class="bg-slate-50 rounded-2xl">
+  <div class="bg-slate-50 dark:bg-gray-800 rounded-2xl">
     <div class="flex justify-start px-8 mt-6 mb-5">
 
       
@@ -104,7 +104,7 @@ const links = [
       size: 'xs'
     }
   }
-  " :links="links"  class="pl-5 bg-slate-50 mt-5"/>
+  " :links="links"  class="pl-5 bg-slate-50 dark:bg-gray-800 mt-5"/>
 </div>
 </div>
   </template>

@@ -10,7 +10,7 @@ definePageMeta({
 
 
 
-<div class="bg-slate-50">
+<div class="bg-slate-50 dark:bg-gray-800">
 
     <RepoNavigationMult />
 
@@ -21,7 +21,7 @@ definePageMeta({
 <div class="w-1/3">
 
 <div class="border border-slate-100">
-      <div class="flex justify-start bg-slate-100 text-sm pl-5 py-3"> 
+      <div class="flex justify-start bg-slate-100 dark:bg-gray-800 text-sm pl-5 py-3"> 
         <UAvatar
       size="3xs"
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"

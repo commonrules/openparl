@@ -29,6 +29,7 @@ const links = [{
     </template>
 
     <template #right>
+      <UColorModeButton />
 
       <Avatar />
     </template>
