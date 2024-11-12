@@ -18,26 +18,20 @@ const links = [
     label: 'Open in Patina',
     labelClass: 'bg-gray-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md mb-0 mt-0',
   }, {
+    label: 'Preview',
+  }, {
+    label: 'Code',
+  }, {
+    label: 'Blame',
+  },
+  {
     icon: 'i-heroicons-heart'
   },{
     icon: 'i-heroicons-ellipsis-vertical'
    }]
 ]
 
-const items = [{
-  label: 'Preview',
-  icon: 'i-heroicons-information-circle',
 
-}, {
-  label: 'Code',
-  icon: 'i-heroicons-arrow-down-tray',
-  disabled: true,
-
-}, {
-  label: 'Blame',
-  icon: 'i-heroicons-eye-dropper',
-
-}]
 </script>
 
 
@@ -114,7 +108,7 @@ const items = [{
   " :links="links"  class="pl-5 bg-slate-50 dark:bg-gray-800 mt-5"/>
 
 
-<UTabs :items="items" />
+
   </template>
 
 <style scoped>
