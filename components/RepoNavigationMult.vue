@@ -3,13 +3,13 @@
 
 const links = [
   [{
-  label: 'Gesetzestext',
+  label: 'Inhalt',
   icon: 'i-heroicons-book-open',
-  to: '/repo1'
+  to: '/repo2'
 }, {
   label: 'Proposals for Revision',
   icon: 'i-heroicons-square-3-stack-3d',
-  to: '/repo2'
+  to: '/repo_rev'
 }, {
   label: 'Discussion',
   icon: 'i-heroicons-rocket-launch',
