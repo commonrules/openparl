@@ -30,7 +30,7 @@
 <tr>
   <td class="pr-5">(3)</td>
   <td><span class="text-slate-400">¹</span></td>
-  <td>Die nachfolgenden Grundrechte binden Gesetzgebung, vollziehende Gewalt und Rechtsprechung als unmittelbar geltendes Recht.</td>
+  <td>Die nachfolgenden Grundrechte binden <a class="underline decoration-sky-500/30">Gesetzgebung</a>, vollziehende Gewalt und Rechtsprechung als unmittelbar geltendes Recht.</td>
 </tr>
 </table>
 <br>
