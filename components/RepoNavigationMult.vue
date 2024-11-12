@@ -101,7 +101,7 @@ const links = [
       size: 'xs'
     }
   }
-  " :links="links"  class="pl-5 bg-slate-50"/>
+  " :links="links"  class="pl-5 bg-slate-50 mt-5"/>
 
   </template>
 
