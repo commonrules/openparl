@@ -78,8 +78,8 @@ definePageMeta({
 
 
 <div class="sticky top-20 z-50 p-10 mt-20">
-<div>Die Grundrechte</div>
-<div>Die weiteren Sachen</div>
+<div>Die Grundrechte (fade in on scroll)</div>
+<div>Der Bund und die Länder</div>
 </div>
 
 
