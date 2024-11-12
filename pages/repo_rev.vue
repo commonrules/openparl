@@ -47,7 +47,7 @@ definePageMeta({
           <UIcon name="i-heroicons-folder" class="w-4 h-4" />
         </td>
         <td class="font-semibold pr-4 ml-4 py-3">In Beratung</td>
-        <td class="ml-10 py-3">Rentenreform zur Beschleunigu..</td>
+        <td class="ml-10 py-3">Gesetzesvorschlag zur Novellierung der Ren...</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
       </tr>
       <tr class="border-t border-slate-100">
@@ -58,7 +58,7 @@ definePageMeta({
           <UIcon name="i-heroicons-document" class="w-4 h-4" />
         </td>
         <td class="font-semibold pr-4 ml-4 py-3">CurrentDraft.md</td>
-        <td class="ml-10 py-3">Rentenreform zur Beschleunigu..</td>
+        <td class="ml-10 py-3">Gesetzesvorschlag zur Novellierung</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
       </tr>
       <tr class="border-t border-slate-100 bg-gray-600 text-white">
