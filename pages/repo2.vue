@@ -77,8 +77,10 @@ definePageMeta({
 
 
 
-
-
+<div>
+<div>Die Grundrechte</div>
+<div>Die weiteren Sachen</div>
+</div>
 
 
     
