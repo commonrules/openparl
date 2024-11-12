@@ -28,6 +28,11 @@ const links = [
     label: 'Blame',
   },
   {
+    label: 'Markup',
+    icon: 'i-heroicons-chevron-down',
+    labelClass: 'font-normal'
+  },
+  {
     icon: 'i-heroicons-heart'
   },{
     icon: 'i-heroicons-ellipsis-vertical'
