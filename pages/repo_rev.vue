@@ -18,15 +18,15 @@ definePageMeta({
 
 <div class="flex justify-center">
 
-<div class="w-full">
+<div class="w-full 2xl:w-2/3 2xl:pt-5">
 
 <div class="border border-slate-100">
       <div class="flex justify-start bg-slate-100 dark:bg-gray-800 text-sm pl-5 py-3"> 
 
     <span class="font-semibold pr-4 ml-0"><span class="mr-2"><UIcon name="i-heroicons-arrow-path" class="w-4 h-4" /></span>20 Open</span>
-    15 Closed<span class="pl-5 text-slate-400">27 Days ago</span>
+    15 Closed<span class="pl-5 text-slate-400"><span class="mr-2 ml-20"><UIcon name="i-heroicons-chevron-down" class="w-4 h-4" /></span>Label</span>
   
-<span class="pl-5"><UIcon name="i-heroicons-arrow-path" class="w-4 h-4" /></span><span class="pl-2 font-semibold">53 Gesetzesänderungen</span></div>
+</div>
 
     </div>
 
