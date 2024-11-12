@@ -15,6 +15,9 @@ const links = [
   icon: 'i-heroicons-rocket-launch',
   to: '/releases'
 },], [{
+    label: 'Fassung vom 18.07.1998',
+    labelClass: 'font-medium'
+  }, {
     label: 'Open in Patina',
     labelClass: 'bg-gray-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md mb-0 mt-0',
   }, {
