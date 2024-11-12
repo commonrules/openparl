@@ -41,12 +41,12 @@ definePageMeta({
       alt="Avatar"
       class="pt-1"
     />
-    <span class="font-semibold pr-4 ml-4">Fraktion B90 / Grüne</span>
+    <span class="font-semibold pr-4 ml-4">Bundestagsfraktion B90 / Grüne</span>
         </td>
         <td class="py-3">
           <UIcon name="i-heroicons-folder" class="w-4 h-4" />
         </td>
-        <td class="font-semibold pr-4 ml-4 py-3">Drafts</td>
+        <td class="font-semibold pr-4 ml-4 py-3">In Beratung</td>
         <td class="ml-10 py-3">Rentenreform zur Beschleunigu..</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
       </tr>
