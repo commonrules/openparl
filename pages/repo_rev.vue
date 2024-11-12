@@ -35,7 +35,13 @@ definePageMeta({
     <tbody>
       <tr class="border-t border-slate-100">
         <td class="pl-5 py-3">
-          <UIcon name="i-heroicons-chevron-right" class="w-4 h-4" />
+          <UAvatar
+      size="3xs"
+      src="https://www.gruene-bw.de/wp-content/themes/welance-gruene-bw/dist/images/teaser-image-fallback.jpg"
+      alt="Avatar"
+      class="pt-1"
+    />
+    <span class="font-semibold pr-4 ml-4">Fraktion B90 / Grüne</span>
         </td>
         <td class="py-3">
           <UIcon name="i-heroicons-folder" class="w-4 h-4" />
