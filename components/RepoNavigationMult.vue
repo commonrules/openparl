@@ -7,18 +7,14 @@ const links = [
   icon: 'i-heroicons-book-open',
   to: '/repo1'
 }, {
-  label: 'Pull Requests',
+  label: 'Proposals for Revision',
   icon: 'i-heroicons-square-3-stack-3d',
   to: '/repo2'
 }, {
   label: 'Discussion',
   icon: 'i-heroicons-rocket-launch',
   to: '/releases'
-},{
-  label: 'Legislative Activity',
-  icon: 'i-heroicons-rocket-launch',
-  to: '/releases'
-}], [{
+},], [{
     label: 'Open in Patina',
     labelClass: 'bg-gray-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md mb-0 mt-0',
   }, {
