@@ -22,12 +22,7 @@ definePageMeta({
 
 <div class="border border-slate-100">
       <div class="flex justify-start bg-slate-100 dark:bg-gray-800 text-sm pl-5 py-3"> 
-        <UAvatar
-      size="3xs"
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"
-      alt="Avatar"
-      class="pt-1"
-    />
+        <UIcon name="i-heroicons-arrow-left" class="w-4 h-4" />
     <span class="font-semibold pr-4 ml-4">Drafts /</span>
     <span class="pl-5 text-slate-400"></span>
   
@@ -45,7 +40,7 @@ definePageMeta({
         <td class="py-3">
           <UIcon name="i-heroicons-folder" class="w-4 h-4" />
         </td>
-        <td class="font-semibold pr-4 ml-4 py-3">Drafts</td>
+        <td class="font-semibold pr-4 ml-4 py-3">Alte Fassungen</td>
         <td class="ml-10 py-3">Rentenreform zur Beschleunigu..</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
       </tr>
