@@ -67,7 +67,7 @@ definePageMeta({
           <UIcon name="i-heroicons-arrow-up" class="w-4 h-4" /><span class="pl-3">8</span>
         </td>
       </tr>
-      <tr class="border-t border-slate-100 bg-slate-100">
+      <tr class="border-t border-slate-100 bg-slate-50">
         <td class="pl-5 py-3">
           <UAvatar
       size="3xs"
