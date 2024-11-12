@@ -69,6 +69,13 @@ definePageMeta({
       </tr>
       <tr class="border-t border-slate-100 bg-slate-100">
         <td class="pl-5 py-3">
+          <UAvatar
+      size="3xs"
+      src="https://media.gq-magazine.co.uk/photos/5d13a04bb744d364a425653b/16:9/w_2560%2Cc_limit/The-Big-Lebowski-hp-GQ-25Feb16_rex_b.jpg"
+      alt="Avatar"
+      class="pt-1"
+    />
+    <span class="font-semibold pr-4 ml-4">profbarthsch68</span>
         </td>
         <td class="font-semibold pr-4 ml-4 py-3">Petition eingereicht</td>
         <td class="ml-10 py-3">Rentenreform zur Beschleunigu..</td>
