@@ -46,8 +46,8 @@ definePageMeta({
         <td class="font-semibold pr-4 ml-4 py-3">In Beratung</td>
         <td class="ml-10 py-3">Gesetzesvorschlag zur Novellierung der Ren...</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
-        <td class="py-3 pr-4">
-          <UIcon name="i-heroicons-arrow-up" class="w-4 h-4" />
+        <td class="py-3 pr-2">
+          <UIcon name="i-heroicons-arrow-up" class="w-4 h-4" /><span class="pl-3">21</span>
         </td>
       </tr>
       <tr class="border-t border-slate-100">
@@ -56,8 +56,8 @@ definePageMeta({
         <td class="font-semibold pr-4 ml-4 py-3">CurrentDraft.md</td>
         <td class="ml-10 py-3">Gesetzesvorschlag zur Novellierung</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
-        <td class="py-3 pr-4">
-          <UIcon name="i-heroicons-arrow-up" class="w-4 h-4" />
+        <td class="py-3 pr-2">
+          <UIcon name="i-heroicons-arrow-up" class="w-4 h-4" /><span class="pl-3">8</span>
         </td>
       </tr>
       <tr class="border-t border-slate-100 bg-slate-100">
@@ -66,8 +66,8 @@ definePageMeta({
         <td class="font-semibold pr-4 ml-4 py-3">Petition eingereicht</td>
         <td class="ml-10 py-3">Rentenreform zur Beschleunigu..</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
-        <td class="py-3 pr-4">
-          <UIcon name="i-heroicons-arrow-up" class="w-4 h-4" />
+        <td class="py-3 pr-2">
+          <UIcon name="i-heroicons-arrow-up" class="w-4 h-4" /><span class="pl-3">37</span>
         </td>
       </tr>
     </tbody>
