@@ -18,18 +18,30 @@ definePageMeta({
 
 <div class="flex justify-between">
 
+<div class="w-1/6">
 
+
+
+
+
+
+
+<div class="sticky top-20 z-50 p-10 mt-20">
+<div>Die Grundrechte (fade in on scroll)</div>
+<div>Der Bund und die Länder</div>
+</div>
 
 
     
-
+    
+  </div>
 
 
   <div class="w-3/6">
     <div><GesetzesTextMarkup /></div>
   </div>
 
-  <div class="w-3/6">
+  <div class="w-2/6">
     lol
   </div>
 

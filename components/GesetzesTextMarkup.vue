@@ -1,11 +1,9 @@
 <template>
-    <div class="text-sm" >
+    <div class="pl-6 pt-4 pr-6 text-sm" >
 
 
-
-
-<div class="bg-gray-200 py-5 px-5">
-<table>
+<div class="text-2xl font-semibold text-slate-600 mb-2">I. Die Grundrechte</div>
+<table >
 <tr>
   <td colspan="3"><span class="font-bold text-slate-700">Art. 1</span><span class="text-slate-500 "> Menschenwürde; Menschenrrechte; Grundrechtsbindung</span> </td>
   <td></td>
@@ -35,8 +33,6 @@
   <td>Die nachfolgenden Grundrechte binden Gesetzgebung, vollziehende Gewalt und Rechtsprechung als unmittelbar geltendes Recht.</td>
 </tr>
 </table>
-</div>
-
 <br>
 <table>
 <tr>
