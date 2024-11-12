@@ -24,6 +24,20 @@ const links = [
    }]
 ]
 
+const items = [{
+  label: 'Preview',
+  icon: 'i-heroicons-information-circle',
+
+}, {
+  label: 'Code',
+  icon: 'i-heroicons-arrow-down-tray',
+  disabled: true,
+
+}, {
+  label: 'Blame',
+  icon: 'i-heroicons-eye-dropper',
+
+}]
 </script>
 
 
@@ -99,6 +113,8 @@ const links = [
   }
   " :links="links"  class="pl-5 bg-slate-50 dark:bg-gray-800 mt-5"/>
 
+
+<UTabs :items="items" />
   </template>
 
 <style scoped>
