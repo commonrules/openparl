@@ -52,8 +52,15 @@ definePageMeta({
       </tr>
       <tr class="border-t border-slate-100">
         <td class="pl-5 py-3">
+          <UAvatar
+      size="3xs"
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Sozialdemokratische_Partei_Deutschlands%2C_Logo_um_2000.svg/1200px-Sozialdemokratische_Partei_Deutschlands%2C_Logo_um_2000.svg.png"
+      alt="Avatar"
+      class="pt-1"
+    />
+    <span class="font-semibold pr-4 ml-4">SPD Bundestagsfraktion</span>
         </td>
-        <td class="font-semibold pr-4 ml-4 py-3">CurrentDraft.md</td>
+        <td class="font-semibold pr-4 ml-4 py-3">Ausschuss</td>
         <td class="ml-10 py-3">Gesetzesvorschlag zur Novellierung</td>
         <td class="pl-5 text-slate-400 py-3">27 Days ago</td>
         <td class="py-3 pr-2">
