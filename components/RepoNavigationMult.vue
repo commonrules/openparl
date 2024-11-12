@@ -18,7 +18,7 @@ const links = [
     label: '0d128d · Fassung vom 18.07.1998',
     labelClass: 'font-normal'
   }, {
-    label: 'Open in Patina',
+    label: 'Open',
     labelClass: 'bg-gray-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md mb-0 mt-0',
   }, {
     label: 'Preview',
