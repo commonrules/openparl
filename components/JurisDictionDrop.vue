@@ -3,10 +3,6 @@ import type { Avatar } from '#ui/types'
 
 const people = [
 {
-  id: 'foryou',
-  label: 'For You',
-}, 
-{
   id: 'eu',
   label: 'European Union',
   icon: 'i-flag-eu-4x3'
@@ -43,6 +39,8 @@ const people = [
 }]
 
 const selected = ref(people[0])
+
+
 </script>
 
 <template>
