@@ -13,7 +13,11 @@ const links = [{
 
 <template>
 
-  <UHorizontalNavigation :links="links" class="mt-5" :ui="{
+
+<Carousel class="mt-10 rounded-3xl"/>
+
+
+<UHorizontalNavigation :links="links" class="mt-5" :ui="{
   wrapper: 'relative w-full flex items-center justify-center',
   container: 'flex items-center min-w-0',
   inner: 'min-w-0',
