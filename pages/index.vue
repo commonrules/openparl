@@ -12,8 +12,8 @@ const links = [{
 
 const modules = [{
   owner: 'mibressler',
-  name: 'VueUse',
-  about: 'Grundgesetz für die Bundesrepublik Deutschland',
+  name: 'BayDiG',
+  about: 'Wiki für das Bayerische Digitalgesetz',
   to: 'https://github.com/vueuse/vueuse',
   icon: 'i-simple-icons-nuxtdotjs'
 }, {
@@ -79,11 +79,11 @@ const modules = [{
       </div>
 
       <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_blank" class="pt-20">
+    <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_blank" class="pt-20 bg-slate-50">
       <div>
         <span class="font-normal">{{ module.owner }}</span>
 
-        / <span class="line-clamp-2 font-semibold">{{ module.name }}</span>
+        / <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
       </div>
       <div>
         <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
