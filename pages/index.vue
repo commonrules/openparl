@@ -38,15 +38,18 @@ const links = [
 
         <div class="w-5/6">
             <div class="flex justify-between">
-                <div class="w-full mr-10">
+                <div class="w-5/6 mr-10">
             <Search class="" /> 
         </div>
 
-
+            <div class="w-1/6">
+                <div class="flex justify-end">
         <JurisDictionDrop />
-        
+
             <Avatar class="mt-1"/>
         </div>
+        </div>
+            </div>
         </div>
     </div>
 </template>
