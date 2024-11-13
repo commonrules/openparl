@@ -2,7 +2,7 @@
 const links = [{
   label: 'Frontpage',
 
-  to: '/getting-started/installation'
+  to: '/'
 }, {
   label: 'Political Discussion',
   to: '/components/horizontal-navigation'
@@ -60,7 +60,7 @@ const links = [{
 }
 "/>
 
-<div class="text-4xl p-4 rounded-lg">
+<div class="text-4xl rounded-lg">
         Featured Repositories
       </div>
 
