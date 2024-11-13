@@ -10,11 +10,25 @@ const links = [{
   label: 'Updates',
 }]
 
-const modules = [{
+const featuredLaws = [{
+  owner: 'Bundestag',
+  name: 'GG',
+  about: 'Grundgesetz für die Bundesrepublik Deutschland',
+  to: '/repo2',
+  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
+}, {
+  owner: 'Congress',
+  name: 'USConstitution',
+  about: 'Constitution of the United States',
+  to: 'https://github.com/vueuse/vueuse',
+  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
+}, ]
+
+const featuredRepos = [{
   owner: 'mibressler',
   name: 'BayDiG',
   about: 'Wiki für das Bayerische Digitalgesetz',
-  to: 'https://github.com/vueuse/vueuse',
+  to: '/repo2',
   avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
 }, {
   owner: 'mibressler',
@@ -23,7 +37,6 @@ const modules = [{
   to: 'https://github.com/vueuse/vueuse',
   avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
 }, ]
-
 </script>
 
 <template>
@@ -76,11 +89,32 @@ const modules = [{
 "/>
 
 <div class="text-4xl rounded-lg mt-2">
+        Featured Laws
+      </div>
+
+      <UPageGrid class="pt-7 pb-10">
+    <UPageCard v-for="(module, index) in featuredLaws" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-64">
+      <div>
+        <UAvatar :src="module.avatar" class="mb-2.5" />
+      </div>
+      <div>
+        <span class="font-normal">{{ module.owner }}</span>
+
+        / <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+      </div>
+      <div>
+        <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
+      </div>
+  
+    </UPageCard>
+  </UPageGrid>
+
+  <div class="text-4xl rounded-lg mt-2">
         Featured Repositories
       </div>
 
       <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_blank" class="pt-20 bg-slate-50 max-w-64">
+    <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-64">
       <div>
         <UAvatar :src="module.avatar" class="mb-2.5" />
       </div>
