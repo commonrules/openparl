@@ -17,9 +17,9 @@ const featuredLaws = [{
   to: '/repo2',
   avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png'
 }, {
-  owner: 'Congress',
-  name: 'USConstitution',
-  about: 'Constitution of the United States',
+  owner: 'Bundestag',
+  name: 'DDG',
+  about: 'Digitale-Dienste-Gesetz',
   to: 'https://github.com/vueuse/vueuse',
   avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png'
 }, ]
