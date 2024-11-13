@@ -15,13 +15,13 @@ const featuredLaws = [{
   name: 'GG',
   about: 'Grundgesetz für die Bundesrepublik Deutschland',
   to: '/repo2',
-  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
+  avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png'
 }, {
   owner: 'Congress',
   name: 'USConstitution',
   about: 'Constitution of the United States',
   to: 'https://github.com/vueuse/vueuse',
-  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
+  avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png'
 }, ]
 
 const featuredRepos = [{
