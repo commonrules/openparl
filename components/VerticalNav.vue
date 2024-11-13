@@ -5,6 +5,10 @@ const links = [
     icon: 'i-heroicons-home',
     to: '/'
   }, {
+    label: 'Discussion',
+    icon: 'i-heroicons-home',
+    to: '/discussion'
+  },{
     label: 'Legislation',
     icon: 'i-heroicons-chart-bar',
     to: '/components/vertical-navigation'

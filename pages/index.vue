@@ -13,12 +13,19 @@ const links = [{
 
 <template>
 
-<div>
-<Carousel class="mt-10 rounded-3xl"/>
-<div class="text-3xl">
-    Trump
-</div>
-</div>
+<div class="relative">
+    <Carousel class="mt-10 rounded-3xl"/>
+    <div class="absolute inset-0 flex items-end justify-start z-10 m-10">
+        <div>
+      <div class="text-7xl text-white p-4 rounded-lg">
+        Trump visits Whitehouse
+      </div>
+      <div class="text-xl font-bold text-white p-4 pt-0 rounded-lg">
+        LIVE
+      </div>
+    </div>
+    </div>
+  </div>
 
 
 <UHorizontalNavigation :links="links" class="mt-5" :ui="{
