@@ -12,8 +12,8 @@ const links = [{
 
 const modules = [{
   owner: 'mibressler',
-  title: 'BayDiG',
-  description: 'Grundgesetz für die Bundesrepublik Deutschland',
+  name: 'VueUse',
+  about: 'Grundgesetz für die Bundesrepublik Deutschland',
   to: 'https://github.com/vueuse/vueuse',
   icon: 'i-simple-icons-nuxtdotjs'
 }, {
@@ -21,12 +21,7 @@ const modules = [{
   description: 'ESLint module for Nuxt.',
   to: 'https://github.com/nuxt-community/eslint-module',
   icon: 'i-simple-icons-eslint'
-}, {
-  title: 'Tailwind CSS',
-  description: 'Add Tailwind CSS to your Nuxt application in seconds with PurgeCSS included for minimal CSS.',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
-  icon: 'i-simple-icons-tailwindcss'
-}]
+}, ]
 
 </script>
 
@@ -79,15 +74,20 @@ const modules = [{
 }
 "/>
 
-<div class="text-4xl rounded-lg">
+<div class="text-4xl rounded-lg mt-2">
         Featured Repositories
       </div>
 
       <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_blank">
-      <template #description>
-        <span class="line-clamp-2">{{ module.description }}</span>
-      </template>
+    <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_blank" class="pt-20">
+      <div>
+        <span class="font-normal">{{ module.owner }}</span>
+
+        / <span class="line-clamp-2 font-semibold">{{ module.name }}</span>
+      </div>
+      <div>
+        <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
+      </div>
     </UPageCard>
   </UPageGrid>
 
