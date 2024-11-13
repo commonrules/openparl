@@ -4,18 +4,17 @@ const items = [
     label: 'mibressler',
     slot: 'account',
     disabled: true
-  }], [{
+  }],[{
     slot: 'last',
+    disabled: true,
+    label: 'Last accessed',
+
+  }],  [{
+    slot: 'last1',
     disabled: false,
-    label1: 'GG',
-    owner1: 'Bundestag',
-    src1: 'https://avatars.githubusercontent.com/u/739984?v=4',
-    label2: 'DDG',
-    owner2: 'Bundestag',
-    src2: 'https://avatars.githubusercontent.com/u/739984?v=4',
-    label3: 'BayDiGWiki',
-    owner3: 'mibressler',
-    src3: 'https://avatars.githubusercontent.com/u/739984?v=4',
+    label: 'GG',
+    owner: 'Bundestag',
+    src: 'https://avatars.githubusercontent.com/u/739984?v=4',
 
   }], [{
     label: 'My Profile',
@@ -57,18 +56,18 @@ const items = [
       </div>
     </template>
 
-    <template #last="{ item }">
-      <div class="text-left text-gray-400">
-        <p>
-          Last accessed
-        </p>
-        <span>{{ item.owner1 }}</span> / <span class="font-semibold">{{ item.label1 }}</span><UAvatar :src="item.src1" class="" />
-        <span>{{ item.owner2 }}</span> / <span class="font-semibold">{{ item.label2 }}</span><UAvatar :src="item.src2" />
-        <span>{{ item.owner3 }}</span> / <span class="font-semibold">{{ item.label3 }}</span><UAvatar :src="item.src3" />
-
-        
+    <template #last1="{ item }">
+  <div class="text-left text-gray-400">
+    <div class="flex justify-between items-center">
+      <div>
+        <span>{{ item.owner }}</span> / <span class="font-semibold">{{ item.label }}</span>
       </div>
-    </template>
+      <UAvatar :src="item.src" size="2xs" class="ml-2"/>
+    </div>
+  </div>
+</template>
+
+    
 
     <template #item="{ item }">
       <span class="truncate">{{ item.label }}</span>
