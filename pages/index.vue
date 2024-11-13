@@ -13,6 +13,7 @@ const links = [{
 
 <template>
 
+<a href="https://www.youtube.com/watch?v=sES2J__1PiY">
 <div class="relative">
     <Carousel class="mt-10 rounded-3xl"/>
     <div class="absolute inset-0 flex items-end justify-start z-10 m-10">
@@ -28,6 +29,7 @@ const links = [{
     </div>
     </div>
   </div>
+</a>
 
 
 <UHorizontalNavigation :links="links" class="mt-5" :ui="{
@@ -66,7 +68,7 @@ const links = [{
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0;
   }
 }
 
