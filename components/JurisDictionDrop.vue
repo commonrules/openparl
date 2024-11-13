@@ -5,7 +5,7 @@ const people = [
 {
   id: 'nobody',
   label: 'For You',
-  icon: 'i-heroicons-user-circle'
+  icon: 'i-heroicons'
 },
 {
   id: 'eu',
