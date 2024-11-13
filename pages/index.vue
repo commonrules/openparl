@@ -13,8 +13,12 @@ const links = [{
 
 <template>
 
-
+<div>
 <Carousel class="mt-10 rounded-3xl"/>
+<div class="text-3xl">
+    Trump
+</div>
+</div>
 
 
 <UHorizontalNavigation :links="links" class="mt-5" :ui="{
