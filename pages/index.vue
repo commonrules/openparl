@@ -26,16 +26,16 @@ const featuredLaws = [{
 
 const featuredRepos = [{
   owner: 'mibressler',
-  name: 'BayDiG',
+  name: 'BayDiGWiki',
   about: 'Wiki für das Bayerische Digitalgesetz',
   to: '/repo2',
   avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
 }, {
-  owner: 'mibressler',
-  name: 'BayDiG',
+  owner: 'somedude27',
+  name: 'openparl-feedback',
   about: 'Wiki für das Bayerische Digitalgesetz',
   to: 'https://github.com/vueuse/vueuse',
-  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
+  avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
 }, ]
 </script>
 
