@@ -60,6 +60,10 @@ const links = [{
 }
 "/>
 
+<div class="text-4xl p-4 rounded-lg">
+        Featured Repositories
+      </div>
+
 </template>
 
 <style scoped>
