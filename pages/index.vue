@@ -44,7 +44,7 @@ const links = [
 
             <div class="w-1/6">
                 <div class="flex justify-end">
-        <JurisDictionDrop />
+        <JurisDictionDrop class="mr-5 mt-1" />
 
             <Avatar class="mt-1"/>
         </div>
