@@ -3,6 +3,11 @@ import type { Avatar } from '#ui/types'
 
 const people = [
 {
+  id: 'nobody',
+  label: 'For You',
+  icon: 'i-heroicons-user-circle'
+},
+{
   id: 'eu',
   label: 'European Union',
   icon: 'i-flag-eu-4x3'
