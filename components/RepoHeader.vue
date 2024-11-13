@@ -76,7 +76,8 @@ class="no-border group bg-slate-50 dark:bg-gray-800"
 
     <template #left>
 
-      <a href="/"><Logo size="xs" class="opacity-60" @hover="isNavOpen = true" /></a>
+
+      <a href="/"><Logo size="xs" class="opacity-60" @mouseenter="isNavOpen = true" /></a>
         <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">Bundestag</div>
        <div class="mb-1">/</div>
         <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">GG</div>
@@ -101,21 +102,7 @@ class="no-border group bg-slate-50 dark:bg-gray-800"
       
     </template>
 
-    <USlideover v-model="isOpen">
-      <div class="p-4 flex-1">
-        <UButton
-          color="gray"
-          variant="ghost"
-          size="sm"
-          icon="i-heroicons-x-mark-20-solid"
-          class="flex sm:hidden absolute end-5 top-5 z-10"
-          square
-          padded
-          @click="isOpen = false"
-        />
-        <Placeholder class="h-full" />
-      </div>
-    </USlideover>
+ 
 
 
   </UHeader>
@@ -127,7 +114,22 @@ class="no-border group bg-slate-50 dark:bg-gray-800"
       </div>
     </UContextMenu>
 
-
+    <USlideover v-model="isNavOpen" side="left" >
+      <div class="p-4 flex-1">
+        <UButton
+          color="gray"
+          variant="ghost"
+          size="sm"
+          icon="i-heroicons-x-mark-20-solid"
+          class="flex sm:hidden absolute end-5 top-5 z-10"
+          square
+          padded
+          @click="isOpen = false"
+        />
+        <SlideOverNav />
+        <Placeholder class="h-full" />
+      </div>
+    </USlideover>
 
 </template>
 
