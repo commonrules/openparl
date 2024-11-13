@@ -26,11 +26,14 @@ const links = [
 
 <template>
 
-<div class="flex justify-start ml-3">
-<a href="/"><Logo size="xs" class="opacity-60"/></a>
-        <div class="pl-3">Openparl</div>
-        </div>
+  <div class="pt-5 pl-6">
 
+<a href="/">
+<div class="flex justify-start">
+            <a href="/"><Logo size="sm" class="opacity-60" /></a>
+            <div class="px-1 mb-1 font-semibold text-lg ml-2">Openparl</div>
+        </div>
+      </a>
 
 <UVerticalNavigation :links="links" class="mt-10" :ui="{
     wrapper: 'relative',
@@ -67,4 +70,13 @@ const links = [
     }
 "/>
 
+</div>
+
 </template>
+
+<style scoped>
+a {
+  outline: none;
+}
+
+</style>
