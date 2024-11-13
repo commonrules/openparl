@@ -80,7 +80,7 @@ const modules = [{
       </div>
 
       <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_blank" class="pt-20 bg-slate-50 max-w-48">
+    <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_blank" class="pt-20 bg-slate-50 max-w-64">
       <div>
         <UAvatar :src="module.avatar" class="mb-2.5" />
       </div>
