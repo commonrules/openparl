@@ -15,7 +15,7 @@ const modules = [{
   name: 'BayDiG',
   about: 'Wiki für das Bayerische Digitalgesetz',
   to: 'https://github.com/vueuse/vueuse',
-  icon: 'i-simple-icons-nuxtdotjs'
+  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
 }, {
   title: 'ESLint',
   description: 'ESLint module for Nuxt.',
@@ -81,6 +81,9 @@ const modules = [{
       <UPageGrid class="pt-7 pb-10">
     <UPageCard v-for="(module, index) in modules" :key="index" v-bind="module" target="_blank" class="pt-20 bg-slate-50">
       <div>
+        <UAvatar :src="module.avatar" />
+      </div>
+      <div>
         <span class="font-normal">{{ module.owner }}</span>
 
         / <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
@@ -88,6 +91,7 @@ const modules = [{
       <div>
         <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
       </div>
+  
     </UPageCard>
   </UPageGrid>
 
