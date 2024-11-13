@@ -17,10 +17,11 @@ const modules = [{
   to: 'https://github.com/vueuse/vueuse',
   avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
 }, {
-  title: 'ESLint',
-  description: 'ESLint module for Nuxt.',
-  to: 'https://github.com/nuxt-community/eslint-module',
-  icon: 'i-simple-icons-eslint'
+  owner: 'mibressler',
+  name: 'BayDiG',
+  about: 'Wiki für das Bayerische Digitalgesetz',
+  to: 'https://github.com/vueuse/vueuse',
+  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
 }, ]
 
 </script>
