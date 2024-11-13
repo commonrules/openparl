@@ -20,9 +20,11 @@ const links = [{
       <div class="text-7xl text-white p-4 rounded-lg">
         Trump visits Whitehouse
       </div>
-      <div class="text-xl font-bold text-white p-4 pt-0 rounded-lg">
+      <div class="text-xl font-bold text-white p-4 pt-0 rounded-lg flex justify-start">
+        <div class="mr-4 mt-2 w-3 h-3 bg-red-500 rounded-full animate-flash"></div>
         LIVE
       </div>
+      
     </div>
     </div>
   </div>
@@ -57,4 +59,19 @@ const links = [{
 "/>
 
 </template>
+
+<style scoped>
+@keyframes flash {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-flash {
+  animation: flash 1s infinite;
+}
+</style>
 
