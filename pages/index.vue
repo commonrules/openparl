@@ -47,7 +47,7 @@ const featuredRepos = [{
     <div class="absolute inset-0 flex items-end justify-start z-10 m-10">
         <div>
       <div class="text-7xl text-white p-4 rounded-lg">
-        Something happens
+        200. Sitzung des Deutschen Bundestages
       </div>
       <div class="text-xl font-bold text-white p-4 pt-0 rounded-lg flex justify-start">
         <div class="mr-4 mt-2 w-3 h-3 bg-red-500 rounded-full animate-flash"></div>
