@@ -30,7 +30,7 @@ const links = [
     <div class="flex justify-between mx-10 mt-8">
         <div class="w-1/6 mt-1">
 
-
+            
             <VerticalNav />
 
         </div> 
@@ -39,9 +39,12 @@ const links = [
         <div class="w-5/6">
             <div class="flex justify-between">
                 <div class="w-full mr-10">
-            <Search class="" />
-
+            <Search class="" /> 
         </div>
+
+
+        <JurisDictionDrop />
+        
             <Avatar class="mt-1"/>
         </div>
         </div>

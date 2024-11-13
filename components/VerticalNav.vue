@@ -31,6 +31,9 @@ const links = [
             <div class="hover:bg-slate-50 hover:rounded px-1 mb-1 font-semibold text-lg ml-2">Openparl</div>
         </div>
 
+
+      
+
 <UVerticalNavigation :links="links" class="mt-10" :ui="{
     wrapper: 'relative',
     base: 'group relative flex items-center gap-1.5 focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-1 focus-visible:before:ring-primary-500 dark:focus-visible:before:ring-primary-400 before:absolute before:inset-px before:rounded-md disabled:cursor-not-allowed disabled:opacity-75',
