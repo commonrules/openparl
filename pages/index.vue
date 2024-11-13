@@ -75,7 +75,10 @@ const links = [
 
         <div class="w-5/6">
             <div class="flex justify-between">
-            <Search class="w-full mr-10" />
+                <div class="w-full mr-10">
+            <Search class="" />
+            
+        </div>
             <Avatar class="mt-1"/>
         </div>
         </div>
