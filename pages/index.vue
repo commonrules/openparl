@@ -14,7 +14,7 @@ const links = [{
 
 <template>
 
-  <UHorizontalNavigation :links="links" class="mt-10" :ui="{
+  <UHorizontalNavigation :links="links" class="mt-5" :ui="{
   wrapper: 'relative w-full flex items-center justify-center',
   container: 'flex items-center min-w-0',
   inner: 'min-w-0',
