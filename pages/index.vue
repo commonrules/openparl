@@ -14,7 +14,7 @@ const featuredLaws = [{
   owner: 'Bundestag',
   name: 'GG',
   about: 'Grundgesetz für die Bundesrepublik Deutschland',
-  to: '/repo2',
+  to: '/repo1',
   avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png'
 }, {
   owner: 'Bundestag',
