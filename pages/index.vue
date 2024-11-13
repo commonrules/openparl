@@ -7,8 +7,7 @@ const links = [{
   label: 'Political Discussion',
   to: '/components/horizontal-navigation'
 }, {
-  label: 'Command Palette',
-  to: '/components/command-palette'
+  label: 'Updates',
 }]
 </script>
 
