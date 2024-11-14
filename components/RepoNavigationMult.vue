@@ -154,15 +154,6 @@ const links = [
     </template>
   </UButton>
   <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">openparl:</span><span>2408.00203</span>
-    <template #leading>
-      <UAvatar
-        src="/logoblack.png"
-        size="3xs"
-      />
-    </template>
-  </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
       <span class="pl-1 text-gray-400">openparl:</span><span>DAT.00203</span>
     <template #leading>
       <UAvatar
