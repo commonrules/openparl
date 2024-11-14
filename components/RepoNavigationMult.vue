@@ -207,7 +207,7 @@ const links = [
       size: 'xs'
     }
   }
-  " :links="links"  class="pl-5 bg-slate-50 dark:bg-gray-800 mt-5"/>
+  " :links="links"  class="pl-5 bg-slate-50 dark:bg-gray-800 mt-4"/>
 
 
 
