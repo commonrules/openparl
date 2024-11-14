@@ -78,7 +78,7 @@ class="no-border group bg-slate-50 dark:bg-gray-800"
 
 
       <a><Logo size="xs" class="opacity-60" @click="isNavOpen = true" /></a>
-        <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">DAT.00203</div>
+        <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">jur-DAT.00203</div>
        <div class="mb-1"></div>
         <div class="hover:bg-slate-50 hover:rounded px-1 mb-1"></div>
         <div class="hover:bg-slate-50 hover:rounded px-1 text-slate-400 mb-1">
