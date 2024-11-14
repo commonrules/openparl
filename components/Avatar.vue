@@ -73,11 +73,11 @@ const items = [
 
     <template #last1="{ item }" >
   <div class="text-left text-gray-400">
-    <div class="flex justify-between items-center">
+    <div class="">
       <div>
-        <span>{{ item.owner }}</span> / <span class="font-semibold">{{ item.label }}</span>
+        <UAvatar :src="item.src" size="2xs" class="mr-2"/><span>{{ item.owner }}</span> / <span class="font-semibold">{{ item.label }}</span>
       </div>
-      <UAvatar :src="item.src" size="2xs" class="ml-2"/>
+      
     </div>
   </div>
 </template>
