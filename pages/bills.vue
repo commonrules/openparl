@@ -95,8 +95,8 @@ const featuredPreprints = [{
   </ULandingGrid>
 </div>
 
-<div class="pb-12 flex justify-start gap-5">
-<UCard class="max-w-20 bg-slate-50 ring-0 font-semibold">GG</UCard>
+<div class="pb-20 flex justify-start gap-5">
+<UCard class="max-w-20 bg-slate-50 ring-0 font-semibold" >GG</UCard>
 <UCard class="max-w-20 bg-slate-50 ring-0 font-semibold">BGB</UCard>
 <UCard class="max-w-20 bg-slate-50 ring-0 font-semibold">DDG</UCard>
 </div>
