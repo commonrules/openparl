@@ -4,27 +4,28 @@ const links = [
     label: 'Home',
     icon: 'i-heroicons-home',
     to: '/'
-  }, {
+  }, 
+  {
     label: 'Discussion',
-    icon: 'i-heroicons-home',
+    icon: 'i-heroicons-chat-bubble-left-right',
     to: '/discussion'
-  },{
+  }, {
     label: 'Legislation',
-    icon: 'i-heroicons-chart-bar',
-    to: '/components/vertical-navigation'
+    icon: 'i-heroicons-user-group',
+    to: '/legislation'
   }, {
     label: 'Bills',
-    icon: 'i-heroicons-command-line',
-    to: '/components/command-palette'
+    icon: 'i-heroicons-book-open',
+    to: '/bills'
   }, {
     label: 'Court Rulings',
-    icon: 'i-heroicons-command-line',
-    to: '/components/command-palette'
+    icon: 'i-heroicons-scale',
+    to: '/rulings'
   }, {
     label: 'Executive Acts',
-    icon: 'i-heroicons-command-line',
-    to: '/components/command-palette'
-  }]
+    icon: 'i-heroicons-building-library',
+    to: '/acts'
+  } ]
 ]
 </script>
 

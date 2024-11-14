@@ -8,23 +8,23 @@ const links = [
   {
     label: 'Discussion',
     icon: 'i-heroicons-chat-bubble-left-right',
-    to: '/components/vertical-navigation'
+    to: '/discussion'
   }, {
     label: 'Legislation',
     icon: 'i-heroicons-user-group',
-    to: '/components/vertical-navigation'
+    to: '/legislation'
   }, {
     label: 'Bills',
     icon: 'i-heroicons-book-open',
-    to: '/components/command-palette'
+    to: '/bills'
   }, {
     label: 'Court Rulings',
     icon: 'i-heroicons-scale',
-    to: '/components/command-palette'
+    to: '/rulings'
   }, {
     label: 'Executive Acts',
     icon: 'i-heroicons-building-library',
-    to: '/components/command-palette'
+    to: '/acts'
   } ]
 ]
 
