@@ -42,6 +42,14 @@ const featuredRepos = [{
   about: 'Wiki für das Bayerische Digitalgesetz',
   to: 'https://github.com/vueuse/vueuse',
   avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
+},]
+
+const featuredPreprints = [{
+  owner: 'DAT.24007',
+  name: 'DAT.24007',
+  about: 'Wiki für das Bayerische Digitalgesetz',
+  to: 'https://github.com/vueuse/vueuse',
+  avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
 }, ]
 </script>
 
@@ -128,6 +136,27 @@ const featuredRepos = [{
         <span class="font-normal">{{ module.owner }}</span>
 
         / <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+      </div>
+      <div>
+        <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
+      </div>
+  
+    </UPageCard>
+  </UPageGrid>
+
+  <div class="text-4xl rounded-lg mt-2">
+        Featured Preprints
+      </div>
+
+      <UPageGrid class="pt-7 pb-10">
+    <UPageCard v-for="(module, index) in featuredPreprints" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-48 ring-0">
+      <div>
+        <UAvatar :src="module.avatar" class="mb-2.5" />
+      </div>
+      <div>
+
+
+         <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
       </div>
       <div>
         <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
