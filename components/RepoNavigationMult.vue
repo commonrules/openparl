@@ -16,7 +16,7 @@ const links = [
   to: '/repo_rev'
 }, {
   label: 'Discussion',
-  icon: 'i-heroicons-chat-bubble-bottom-center-text',
+  icon: 'i-heroicons-chat-bubble-left-right',
   to: '/releases'
 },], [{
     label: '0d128d · Fassung vom 18.07.1998',
