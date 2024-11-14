@@ -55,6 +55,7 @@ const featuredPreprints = [{
 
 <template>
 
+
 <a href="https://www.youtube.com/watch?v=sES2J__1PiY">
 <div class="relative">
     <Carousel class="mt-10 rounded-3xl"/>
@@ -73,6 +74,28 @@ const featuredPreprints = [{
   </div>
 </a>
 
+<UIcon name="i-heroicons-arrow-path" class="w-5 h-5 mb-4 mt-12 text-slate-400" />
+<div class="pb-5 flex justify-start gap-5">
+<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">GG
+  <template #leading>
+      <UAvatar
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"
+        size="2xs"
+      />
+    </template>
+</UButton>
+<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">BGB
+</UButton>
+<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">DDG
+  <template #leading>
+      <UAvatar
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"
+        size="2xs"
+      />
+    </template>
+</UButton>
+
+</div>
 
 <UHorizontalNavigation :links="links" class="mt-5" :ui="{
   wrapper: 'relative w-full flex items-center justify-center',
