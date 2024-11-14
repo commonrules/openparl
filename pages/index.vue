@@ -47,7 +47,7 @@ const featuredRepos = [{
 const featuredPreprints = [{
   owner: 'DAT.24007',
   name: 'Geltungskraft und Geltungs- verlust von Rechtsnormen: Elemente einer Theorie der autoritativen Normgeltungsbeendigung',
-  about: 'Wiki für das Bayerische Digitalgesetz',
+  about: 'Prof. Dr. Albert Vielmacher',
   to: 'https://github.com/vueuse/vueuse',
   avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
 }, ]
