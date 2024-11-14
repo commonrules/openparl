@@ -9,7 +9,7 @@ const links = [
     icon: 'i-heroicons-chart-bar',
     to: '/components/vertical-navigation'
   }, {
-    label: 'Laws',
+    label: 'Bills',
     icon: 'i-heroicons-command-line',
     to: '/components/command-palette'
   }, {

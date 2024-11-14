@@ -95,7 +95,7 @@ const featuredRepos = [{
 "/>
 
 <div class="text-4xl rounded-lg mt-2">
-        Featured Laws
+        Featured Bills
       </div>
 
       <UPageGrid class="pt-7 pb-10">
