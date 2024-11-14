@@ -170,7 +170,7 @@ const links = [
   
   </div>
 
-  <div class="px-8 pt-2 font-semibold text-blue-600"><a href="google.com">projectwebsite.org</a></div>
+  <div class="px-8 pt-1 font-semibold text-blue-600"><a href="google.com">projectwebsite.org</a></div>
 
   
   </div>
