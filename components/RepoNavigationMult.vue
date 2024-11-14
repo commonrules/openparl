@@ -17,9 +17,9 @@ const links = [
   to: '/repo2subfold',
   badge: 1,
 }, {
-  label: 'Cited in',
+  label: 'Cited in (& topics)',
   icon: 'i-heroicons-bars-3-bottom-left',
-  to: '/repo2subfold',
+  to: '/repo2',
   badge: 5,
 }, {
   label: 'Discussion',
