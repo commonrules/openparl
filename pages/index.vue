@@ -154,12 +154,14 @@ const featuredPreprints = [{
         <UAvatar :src="module.avatar" class="mb-2.5" />
       </div>
       <div>
-        <span class="font-normal">{{ module.owner }}</span>
+        
 
          <span class="hyphens-manual  line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+         <span class="font-normal">{{ module.owner }}</span>
       </div>
       <div>
         <span class="mt-2 line-clamp-4 text-slate-500 text-sm">{{ module.about }}</span>
+        
       </div>
   
     </UPageCard>
