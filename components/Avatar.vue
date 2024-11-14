@@ -17,7 +17,7 @@ const items = [
     src: 'https://avatars.githubusercontent.com/u/739984?v=4',
 
   },{
-    slot: 'last2',
+    slot: 'last1',
     disabled: false,
     label: 'DDG',
     owner: 'Bundestag',
@@ -82,27 +82,6 @@ const items = [
   </div>
 </template>
 
-<template #last2="{ item }" >
-  <div class="text-left text-gray-400">
-    <div class="flex justify-between items-center">
-      <div>
-        <span>{{ item.owner }}</span> / <span class="font-semibold">{{ item.label }}</span>
-      </div>
-      <UAvatar :src="item.src" size="2xs" class="ml-2"/>
-    </div>
-  </div>
-</template>
-
-<template #last3="{ item }" >
-  <div class="text-left text-gray-400">
-    <div class="flex justify-between items-center">
-      <div>
-        <span>{{ item.owner }}</span> / <span class="font-semibold">{{ item.label }}</span>
-      </div>
-      <UAvatar :src="item.src" size="2xs" class="ml-2"/>
-    </div>
-  </div>
-</template>
 
     
 
