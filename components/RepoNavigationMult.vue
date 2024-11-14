@@ -5,7 +5,7 @@ const links = [
   [{
   label: 'Inhalt',
   icon: 'i-heroicons-book-open',
-  to: '/repo2'
+  to: '/repo1'
 }, {
   label: 'Proposals for Revision',
   icon: 'i-heroicons-square-3-stack-3d',
@@ -14,7 +14,7 @@ const links = [
 }, {
   label: 'Actions',
   icon: 'i-heroicons-forward',
-  to: '/repo1',
+  to: '/repo2subfold',
   badge: 1,
 }, {
   label: 'Discussion',
