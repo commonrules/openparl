@@ -11,8 +11,12 @@ const links = [
   icon: 'i-heroicons-square-3-stack-3d',
   to: '/repo_rev'
 }, {
+  label: 'Workflows',
+  icon: 'i-heroicons-forward',
+  to: '/repo_rev'
+}, {
   label: 'Discussion',
-  icon: 'i-heroicons-rocket-launch',
+  icon: 'i-heroicons-chat-bubble-bottom-center-text',
   to: '/releases'
 },], [{
     label: '0d128d · Fassung vom 18.07.1998',
