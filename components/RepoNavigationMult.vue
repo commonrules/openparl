@@ -86,7 +86,7 @@ const links = [
   
 
     <UButton color="gray" class="mt-1 mb-4 rounded-full bg-slate-200" variant="ghost">
-      Button
+      <span class="text-normal">mibressler / </span><span>baydigwiki</span>
     <template #leading>
       <UAvatar
         src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
