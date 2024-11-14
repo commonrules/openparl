@@ -48,7 +48,7 @@ const featuredPreprints = [{
   owner: 'Vielmacher, A. et. al.',
   name: 'DAT.24007',
   about: 'Geltungskraft und Geltungsverlust von Rechtsnormen: Elemente einer Theorie der autoritativen Normgeltungsbeendigung',
-  to: 'https://github.com/vueuse/vueuse',
+  to: '/dat.00203',
   avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
 }, ]
 </script>
