@@ -96,7 +96,14 @@ const featuredPreprints = [{
 </div>
 <UIcon name="i-heroicons-arrow-path" class="w-5 h-5 mb-4 text-slate-400" />
 <div class="pb-20 flex justify-start gap-5">
-<UButton size="xl" variant="soft">GG</UButton>
+<UButton size="xl" variant="soft" >GG
+  <template #leading>
+      <UAvatar
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"
+        size="2xs"
+      />
+    </template>
+</UButton>
 </div>
 
 <div class="text-4xl rounded-lg mt-2">
