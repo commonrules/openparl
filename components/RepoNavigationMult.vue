@@ -14,12 +14,12 @@ const links = [
 }, {
   label: 'Actions',
   icon: 'i-heroicons-forward',
-  to: '/repo_rev2',
+  to: '/repo1',
   badge: 1,
 }, {
   label: 'Discussion',
   icon: 'i-heroicons-chat-bubble-left-right',
-  to: '/releases',
+  to: '/repo2detail',
   badge: 103,
 },], [{
     label: '0d128d · Fassung vom 18.07.1998',
