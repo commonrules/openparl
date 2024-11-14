@@ -19,7 +19,8 @@ const links = [
 }, {
   label: 'Discussion',
   icon: 'i-heroicons-chat-bubble-left-right',
-  to: '/releases'
+  to: '/releases',
+  badge: 103,
 },], [{
     label: '0d128d · Fassung vom 18.07.1998',
     labelClass: 'font-normal'
