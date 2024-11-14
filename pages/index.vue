@@ -47,7 +47,7 @@ const featuredRepos = [{
 const featuredPreprints = [{
   owner: 'DAT.24007',
   name: 'DAT.24007',
-  about: 'Wiki für das Bayerische Digitalgesetz',
+  about: 'Geltungskraft und Geltungsverlust von Rechtsnormen: Elemente einer Theorie der autoritativen Normgeltungsbeendigung',
   to: 'https://github.com/vueuse/vueuse',
   avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
 }, ]
