@@ -136,7 +136,7 @@ const links = [
     </template>
   </UButton>
   <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">Bundestag/</span><span>GG</span>
+      <span class="pl-1 text-gray-400">Bundestag/</span><span>DDG Art. 1</span>
     <template #leading>
       <UAvatar
         src="/logoblack.png"
