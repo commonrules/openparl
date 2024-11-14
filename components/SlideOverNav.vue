@@ -7,23 +7,23 @@ const links = [
   }, 
   {
     label: 'Discussion',
-    icon: 'i-heroicons-chart-bar',
+    icon: 'i-heroicons-chat-bubble-left-right',
     to: '/components/vertical-navigation'
   }, {
     label: 'Legislation',
-    icon: 'i-heroicons-chart-bar',
+    icon: 'i-heroicons-user-group',
     to: '/components/vertical-navigation'
   }, {
     label: 'Bills',
-    icon: 'i-heroicons-command-line',
+    icon: 'i-heroicons-book-open',
     to: '/components/command-palette'
   }, {
     label: 'Court Rulings',
-    icon: 'i-heroicons-command-line',
+    icon: 'i-heroicons-scale',
     to: '/components/command-palette'
   }, {
     label: 'Executive Acts',
-    icon: 'i-heroicons-command-line',
+    icon: 'i-heroicons-building-library',
     to: '/components/command-palette'
   } ]
 ]
@@ -31,7 +31,7 @@ const links = [
 const bottomlinks = [
   [ {
     label: 'Workflows',
-    icon: 'i-heroicons-command-line',
+    icon: 'i-heroicons-forward',
     to: '/components/command-palette'
   } ]
 ]
