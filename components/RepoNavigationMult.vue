@@ -83,7 +83,7 @@ const links = [
 
 
   <div class="px-8">
-    <UButton label="Button" color="gray" class="mt-1 mb-4">
+    <UButton label="arxiv:202" color="gray" class="mt-1 mb-4 rounded-full bg-slate-50" variant="ghost" >
     <template #leading>
       <UAvatar
         src="https://avatars.githubusercontent.com/u/739984?v=4"
