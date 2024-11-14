@@ -90,8 +90,8 @@ const links = [
   <div class="px-8">
   
 
-    <UButton color="gray" class="mt-1 mb-4 rounded-full bg-slate-200" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-500">mibressler/</span><span>baydigwiki</span>
+    <UButton color="gray" class="mt-1 mb-4 rounded-full bg-slate-100" variant="ghost" size="sm">
+      <span class="pl-1 text-gray-400">mibressler/</span><span>baydigwiki</span>
     <template #leading>
       <UAvatar
         src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
@@ -99,11 +99,20 @@ const links = [
       />
     </template>
   </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-5 rounded-full bg-slate-200" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-500">arxiv:</span><span>2408.00203</span>
+  <UButton color="gray" class="mt-1 mb-4 ml-5 rounded-full bg-slate-100" variant="ghost" size="sm">
+      <span class="pl-1 text-gray-400">arxiv:</span><span>2408.00203</span>
     <template #leading>
       <UAvatar
         src="https://cdn.icon-icons.com/icons2/2389/PNG/512/arxiv_logo_icon_145478.png"
+        size="3xs"
+      />
+    </template>
+  </UButton>
+  <UButton color="gray" class="mt-1 mb-4 ml-5 rounded-full bg-slate-100" variant="ghost" size="sm">
+      <span class="pl-1 text-gray-400">mibressler/</span><span>llama-finetune3</span>
+    <template #leading>
+      <UAvatar
+        src="https://cdn.worldvectorlogo.com/logos/huggingface-2.svg"
         size="3xs"
       />
     </template>
