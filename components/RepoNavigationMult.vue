@@ -85,7 +85,7 @@ const links = [
   <div class="px-8">
   
 
-    <UButton color="gray" class="mt-1 mb-4 rounded-full bg-slate-200" variant="ghost">
+    <UButton color="gray" class="mt-1 mb-4 rounded-full bg-slate-200" variant="ghost" size="sm">
       <span class="text-normal">mibressler / </span><span>baydigwiki</span>
     <template #leading>
       <UAvatar
