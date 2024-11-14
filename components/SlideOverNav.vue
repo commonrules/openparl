@@ -30,7 +30,7 @@ const links = [
 
 const bottomlinks = [
   [ {
-    label: 'Workflows',
+    label: 'Actions',
     icon: 'i-heroicons-forward',
     to: '/components/command-palette'
   } ]

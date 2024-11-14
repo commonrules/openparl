@@ -18,7 +18,7 @@ useHead({
 
 <div class="bg-slate-50 dark:bg-gray-800">
 
-    <RepoNavigation />
+    <RepoNavigationMult />
 
 </div>
 
