@@ -55,26 +55,10 @@ const featuredPreprints = [{
 
 <template>
 
-<a href="https://www.youtube.com/watch?v=sES2J__1PiY">
-<div class="relative">
-    <Carousel class="mt-10 rounded-3xl"/>
-    <div class="absolute inset-0 flex items-end justify-start z-10 m-10">
-        <div>
-      <div class="text-7xl text-white p-4 rounded-lg">
-        200. Sitzung des Deutschen Bundestages
-      </div>
-      <div class="text-xl font-bold text-white p-4 pt-0 rounded-lg flex justify-start">
-        <div class="mr-4 mt-2 w-3 h-3 bg-red-500 rounded-full animate-flash"></div>
-        LIVE
-      </div>
-      
-    </div>
-    </div>
-  </div>
-</a>
 
 
-<UHorizontalNavigation :links="links" class="mt-5" :ui="{
+
+<UHorizontalNavigation :links="links" class="mt-10" :ui="{
   wrapper: 'relative w-full flex items-center justify-center',
   container: 'flex items-center min-w-0',
   inner: 'min-w-0',
@@ -102,8 +86,17 @@ const featuredPreprints = [{
 }
 "/>
 
+<div class="pb-16 pt-10">
+
+  <ULandingGrid>
+    <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="Privatrecht" description="Choose a primary and a gray color from your Tailwind CSS color palette." />
+    <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Öffentliches Recht" description="Change the style of any component in your App Config or with ui prop." />
+    <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Strafrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." />
+  </ULandingGrid>
+</div>
+
 <div class="text-4xl rounded-lg mt-2">
-        Featured Bills
+        For You
       </div>
 
       <UPageGrid class="pt-7 pb-10">
@@ -123,49 +116,6 @@ const featuredPreprints = [{
     </UPageCard>
   </UPageGrid>
 
-  <div class="text-4xl rounded-lg mt-2">
-        Featured Repositories
-      </div>
-
-      <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-48 ring-0">
-      <div>
-        <UAvatar :src="module.avatar" class="mb-2.5" />
-      </div>
-      <div>
-        <span class="font-normal">{{ module.owner }}</span>
-
-        / <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
-      </div>
-      <div>
-        <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
-      </div>
-  
-    </UPageCard>
-  </UPageGrid>
-
-  <div class="text-4xl rounded-lg mt-2">
-        Featured Preprints
-      </div>
-
-      <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in featuredPreprints" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-48 ring-0">
-      <div>
-        <UAvatar :src="module.avatar" class="mb-2.5" />
-      </div>
-      <div>
-        
-
-         <span class="hyphens-manual  line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
-         <span class="font-normal">{{ module.owner }}</span>
-      </div>
-      <div>
-        <span class="mt-2 line-clamp-4 text-slate-500 text-sm">{{ module.about }}</span>
-        
-      </div>
-  
-    </UPageCard>
-  </UPageGrid>
 
 </template>
 
