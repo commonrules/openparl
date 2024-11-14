@@ -132,7 +132,7 @@ const links = [
       size: '2xs'
     },
     badge: {
-      base: 'flex-shrink-0 ms-auto relative rounded bg-slate-100 ring-0',
+      base: 'flex-shrink-0 ms-auto relative rounded bg-slate-100 ring-0 text-slate-400',
       color: 'gray',
       variant: 'solid',
       size: 'xs'
