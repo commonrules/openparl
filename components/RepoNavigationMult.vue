@@ -13,7 +13,7 @@ const links = [
 }, {
   label: 'Workflows',
   icon: 'i-heroicons-forward',
-  to: '/repo_rev'
+  to: '/repo_rev2'
 }, {
   label: 'Discussion',
   icon: 'i-heroicons-chat-bubble-left-right',

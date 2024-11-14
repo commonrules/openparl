@@ -118,6 +118,8 @@ const bottomlinks = [
     }
 "/>
 
+<p class="text-xs text-gray-500 mt-10">© 2024 Openparl · About · Updates · Impressum · Datenschutz</p> 
+
 </div>
 
 </template>
