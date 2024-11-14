@@ -118,7 +118,7 @@ const links = [
     </template>
   </UButton>
   <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">mibressler/</span><span>llama-finetune3</span>
+      <span class="pl-1 text-gray-400">beck:</span><span>FHOeffR 11 Nr. 4148</span>
     <template #leading>
       <UAvatar
         src="https://presse.beck.de/media/2ileyyfj/chbeck-bildmarke.jpg"
@@ -127,7 +127,7 @@ const links = [
     </template>
   </UButton>
   <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">mibressler/</span><span>llama-finetune3</span>
+      <span class="pl-1 text-gray-400">juris:</span><span>KIR 2024, 77</span>
     <template #leading>
       <UAvatar
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Juris.svg/602px-Juris.svg.png"
