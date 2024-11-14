@@ -144,6 +144,24 @@ const links = [
       />
     </template>
   </UButton>
+  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
+      <span class="pl-1 text-gray-400">-qhhz-0AAAAJ:</span><span>J-pR_7NvFogC</span>
+    <template #leading>
+      <UAvatar
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/1200px-Google_Scholar_logo.svg.png"
+        size="3xs"
+      />
+    </template>
+  </UButton>
+  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
+      <span class="pl-1 text-gray-400">openparl:</span><span>2408.00203</span>
+    <template #leading>
+      <UAvatar
+        src="/logoblack.png"
+        size="3xs"
+      />
+    </template>
+  </UButton>
     <div class="font-semibold pb-1">About</div>
 
     <div class="text-md 2xl:w-3/5">With the rapid development of artificial intelligence technology, large language models (LLMs) have made significant progress in fields such as natural language processing, computer vision, and scientific tasks. However, as the scale of these models increases, optimizing resource consumption while maintaining high performance has become a key challenge. </div>
