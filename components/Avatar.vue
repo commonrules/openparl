@@ -15,6 +15,7 @@ const items = [
     label: 'GG',
     owner: 'Bundestag',
     src: 'https://avatars.githubusercontent.com/u/739984?v=4',
+    to: '/repo1'
 
   },{
     slot: 'last1',
@@ -22,6 +23,7 @@ const items = [
     label: 'DDG',
     owner: 'Bundestag',
     src: 'https://avatars.githubusercontent.com/u/739984?v=4',
+    to: '/repo1'
 
   },{
     slot: 'last1',
@@ -29,6 +31,7 @@ const items = [
     label: 'BayDWiki',
     owner: 'mibressler',
     src: 'https://avatars.githubusercontent.com/u/739984?v=4',
+    to: '/repo2'
 
   }],
    [{
