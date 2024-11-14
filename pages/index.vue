@@ -1,4 +1,10 @@
 <script setup lang="ts">
+
+useHead({
+  title: 'Openparl',
+})
+
+
 const links = [{
   label: 'Frontpage',
 

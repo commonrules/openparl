@@ -3,6 +3,9 @@ definePageMeta({
   layout: 'repo'
 })
 
+useHead({
+  title: 'Bundestag / GG',
+})
 
 </script>
 

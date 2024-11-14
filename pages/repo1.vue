@@ -6,12 +6,6 @@ definePageMeta({
 
 useHead({
   title: 'Bundestag / GG',
-  meta: [
-    {
-      name: 'description',
-      content: 'My awesome app'
-    }
-  ]
 })
 
 
