@@ -94,11 +94,9 @@ const featuredPreprints = [{
     <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Strafrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue" />
   </ULandingGrid>
 </div>
-
+<UIcon name="i-heroicons-arrow-path" class="w-5 h-5 mb-4 text-slate-400" />
 <div class="pb-20 flex justify-start gap-5">
-<UCard class="max-w-20 bg-slate-50 ring-0 font-semibold" >GG</UCard>
-<UCard class="max-w-20 bg-slate-50 ring-0 font-semibold">BGB</UCard>
-<UCard class="max-w-20 bg-slate-50 ring-0 font-semibold">DDG</UCard>
+<UButton size="xl" variant="soft">GG</UButton>
 </div>
 
 <div class="text-4xl rounded-lg mt-2">
