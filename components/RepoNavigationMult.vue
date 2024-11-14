@@ -12,7 +12,7 @@ const links = [
   to: '/repo_rev',
   badge: 3,
 }, {
-  label: 'Actions',
+  label: 'Actions (& cited in)',
   icon: 'i-heroicons-forward',
   to: '/repo2subfold',
   badge: 1,
