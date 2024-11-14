@@ -9,11 +9,13 @@ const links = [
 }, {
   label: 'Proposals for Revision',
   icon: 'i-heroicons-square-3-stack-3d',
-  to: '/repo_rev'
+  to: '/repo_rev',
+  badge: 3,
 }, {
   label: 'Actions',
   icon: 'i-heroicons-forward',
-  to: '/repo_rev2'
+  to: '/repo_rev2',
+  badge: 1,
 }, {
   label: 'Discussion',
   icon: 'i-heroicons-chat-bubble-left-right',
