@@ -77,7 +77,7 @@ class="no-border group bg-slate-50 dark:bg-gray-800"
     <template #left>
 
 
-      <a href="/"><Logo size="xs" class="opacity-60" @mouseenter="isNavOpen = true" /></a>
+      <a><Logo size="xs" class="opacity-60" @click="isNavOpen = true" /></a>
         <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">Bundestag</div>
        <div class="mb-1">/</div>
         <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">GG</div>
