@@ -83,11 +83,14 @@ const links = [
 
 
   <div class="px-8">
-    <UButton label="arxiv:202" color="gray" class="mt-1 mb-4 rounded-full bg-slate-50" variant="ghost" >
+  
+
+    <UButton color="gray" class="mt-1 mb-4 rounded-full bg-slate-200" variant="ghost">
+      Button
     <template #leading>
       <UAvatar
-        src="https://avatars.githubusercontent.com/u/739984?v=4"
-        size="2xs"
+        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+        size="3xs"
       />
     </template>
   </UButton>
