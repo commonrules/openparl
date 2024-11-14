@@ -86,13 +86,17 @@ const featuredPreprints = [{
 }
 "/>
 
-<div class="pb-16 pt-10">
+<div class="pb-10 pt-10">
 
   <ULandingGrid>
     <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="Privatrecht" description="Choose a primary and a gray color from your Tailwind CSS color palette." color="blue"/>
     <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Öffentliches Recht" description="Change the style of any component in your App Config or with ui prop." color="blue"/>
     <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Strafrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue" />
   </ULandingGrid>
+</div>
+
+<div class="pb-12">
+<UCard class="max-w-48 bg-slate-50 ring-0 font-semibold">GG</UCard>
 </div>
 
 <div class="text-4xl rounded-lg mt-2">
