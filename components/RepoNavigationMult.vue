@@ -12,10 +12,15 @@ const links = [
   to: '/repo_rev',
   badge: 3,
 }, {
-  label: 'Actions (& cited in)',
+  label: 'Actions',
   icon: 'i-heroicons-forward',
   to: '/repo2subfold',
   badge: 1,
+}, {
+  label: 'Cited in',
+  icon: 'i-heroicons-bars-3-bottom-left',
+  to: '/repo2subfold',
+  badge: 5,
 }, {
   label: 'Discussion',
   icon: 'i-heroicons-chat-bubble-left-right',
