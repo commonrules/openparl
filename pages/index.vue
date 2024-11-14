@@ -47,7 +47,7 @@ const featuredRepos = [{
 const featuredPreprints = [{
   owner: 'Vielmacher, A. et. al.',
   name: 'DAT.24007',
-  about: 'Geltungskraft und Geltungs- verlust von Rechtsnormen: Elemente einer Theorie der autoritativen Normgeltungsbeendigung',
+  about: 'Geltungskraft und Geltungsverlust von Rechtsnormen: Elemente einer Theorie der autoritativen Normgeltungsbeendigung',
   to: 'https://github.com/vueuse/vueuse',
   avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
 }, ]
@@ -159,7 +159,7 @@ const featuredPreprints = [{
          <span class="hyphens-manual  line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
       </div>
       <div>
-        <span class="mt-2 line-clamp-4 leading-6 text-slate-500 text-sm">{{ module.about }}</span>
+        <span class="mt-2 line-clamp-4 text-slate-500 text-sm">{{ module.about }}</span>
       </div>
   
     </UPageCard>
