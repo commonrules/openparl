@@ -23,7 +23,7 @@ const items = [
     label: 'DDG',
     owner: 'Bundestag',
     src: 'https://avatars.githubusercontent.com/u/739984?v=4',
-    to: '/repo1'
+    to: '/repo_rev'
 
   },{
     slot: 'last1',
