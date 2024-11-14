@@ -11,7 +11,7 @@ const links = [
   icon: 'i-heroicons-square-3-stack-3d',
   to: '/repo_rev'
 }, {
-  label: 'Workflows',
+  label: 'Actions',
   icon: 'i-heroicons-forward',
   to: '/repo_rev2'
 }, {
