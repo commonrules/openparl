@@ -177,7 +177,7 @@ const featuredRepos = [{
   </div>
 
   <div class="text-4xl rounded-lg mt-8">
-        Feed
+        Feed (e.g Activity)
       </div>
   
 
