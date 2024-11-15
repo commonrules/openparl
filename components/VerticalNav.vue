@@ -122,6 +122,15 @@ const bottomlinks = [
 "/>
 
 
+<div class="mt-5">&nbsp;</div>
+<div class="mt-20">&nbsp;</div>
+<div class="mt-20">&nbsp;</div>
+<div class="mt-20">&nbsp;</div>
+<div class="mt-20">&nbsp;</div>
+<div class="mt-20">&nbsp;</div>
+<div class="text-xs text-gray-400 mt-10">© 2024 Openparl</div>
+<div class="text-xs text-gray-400 mt-2">About · Blog · Impressum · Datenschutz</div> 
+
 
 
 </template>
