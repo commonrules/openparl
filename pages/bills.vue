@@ -82,19 +82,45 @@ const featuredPreprints = [{
 
 </div>
 
-<div class="text-4xl rounded-lg mt-0">
+<div class="text-4xl rounded-lg mt-8">
         For You
       </div>
 
-      <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in featuredLaws" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-48 ring-0">
+      <UPageGrid class="pt-7 pb-10" :ui="{
+  wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-8'
+}">
+    <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 ring-0">
       <div>
         <UAvatar :src="module.avatar" class="mb-2.5" />
       </div>
       <div>
         <span class="font-normal">{{ module.owner }}</span>
 
-        / <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+        <span> &nbsp;{{ module.nopreprint }}</span> <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+      </div>
+      <div>
+        <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
+      </div>
+  
+    </UPageCard>
+  </UPageGrid>
+
+
+  <div class="text-4xl rounded-lg mt-8">
+        All
+      </div>
+
+      <UPageGrid class="pt-7 pb-10" :ui="{
+  wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-8'
+}">
+    <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 ring-0">
+      <div>
+        <UAvatar :src="module.avatar" class="mb-2.5" />
+      </div>
+      <div>
+        <span class="font-normal">{{ module.owner }}</span>
+
+        <span> &nbsp;{{ module.nopreprint }}</span> <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
       </div>
       <div>
         <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
