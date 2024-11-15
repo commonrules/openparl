@@ -48,7 +48,9 @@ const featuredRepos = [{
   name: 'DAT.24007',
   about: 'Geltungskraft und Geltungsverlust von Rechtsnormen: Elemente einer Theorie der autoritativen Normgeltungsbeendigung',
   to: '/dat.00203',
-  avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
+  avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4',
+  preprintname: 'Vielmacher, A. et. al',
+  preprintabout: 'Vielmacher, A. et. al'
 },]
 </script>
 
@@ -115,7 +117,9 @@ const featuredRepos = [{
         Featured Repositories
       </div>
 
-      <UPageGrid class="pt-7 pb-10">
+      <UPageGrid class="pt-7 pb-10" :ui="{
+  wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-8'
+}">
     <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 ring-0">
       <div>
         <UAvatar :src="module.avatar" class="mb-2.5" />
