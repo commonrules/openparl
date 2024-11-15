@@ -84,7 +84,7 @@ const bottomlinks = [
 "/>
 
 
-<div class="top-[1100px] fixed sticky">
+<div class="top-[1050px] fixed sticky">
 <UVerticalNavigation :links="bottomlinks"  :ui="{
     wrapper: 'relative',
     base: 'group relative flex items-center gap-1.5 focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-1 focus-visible:before:ring-primary-500 dark:focus-visible:before:ring-primary-400 before:absolute before:inset-px before:rounded-md disabled:cursor-not-allowed disabled:opacity-75',
@@ -120,7 +120,7 @@ const bottomlinks = [
     }
 "/>
 
-<div class="text-xs text-gray-500">© 2024 Openparl</div>
+<div class="text-xs text-gray-500 mt-10">© 2024 Openparl</div>
 <div class="text-xs text-gray-500 mt-2">About · Updates · Impressum · Datenschutz</div> 
 </div>
 
