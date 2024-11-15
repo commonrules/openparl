@@ -25,7 +25,11 @@ const links = [
     label: 'Executive Acts',
     icon: 'i-heroicons-building-library',
     to: '/acts'
-  } ]
+  } ], [{
+    label: 'Actions',
+    icon: 'i-heroicons-forward',
+  }
+  ]
 ]
 </script>
 
