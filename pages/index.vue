@@ -113,11 +113,11 @@ const featuredPreprints = [{
 
 
 <div class="text-4xl rounded-lg mt-8">
-        Featured Bills
+        Featured Repositories
       </div>
 
       <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in featuredLaws" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-48 ring-0">
+    <UPageCard v-for="(module, index) in featuredLaws" :key="index" v-bind="module" class="pt-20 bg-slate-50 ring-0">
       <div>
         <UAvatar :src="module.avatar" class="mb-2.5" />
       </div>
