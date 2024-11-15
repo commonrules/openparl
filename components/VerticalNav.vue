@@ -83,7 +83,8 @@ const bottomlinks = [
     }
 "/>
 
-
+<div class="mt-64">.</div>
+<div class="mt-12">.</div>
 <div class="mt-64">
 <UVerticalNavigation :links="bottomlinks"  :ui="{
     wrapper: 'relative',
