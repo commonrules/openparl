@@ -11,7 +11,7 @@ const links = [{
   to: '/discussion'
 }, {
   label: 'Political Discussion',
-  to: '/components/horizontal-navigation'
+  to: '/'
 },]
 
 const featuredLaws = [{
