@@ -57,35 +57,6 @@ const featuredPreprints = [{
 
 
 
-
-<UHorizontalNavigation :links="links" class="mt-10" :ui="{
-  wrapper: 'relative w-full flex items-center justify-center',
-  container: 'flex items-center min-w-0',
-  inner: 'min-w-0',
-  base: 'group relative w-full flex items-center gap-1.5 px-2.5 py-3.5 rounded-md font-normal text-sm focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 disabled:cursor-not-allowed disabled:opacity-75',
-  before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50',
-  after: 'after:absolute after:bottom-0 after:inset-x-2.5 after:block after:h-[2px] after:mt-2',
-  active: 'text-gray-900 dark:text-white after:bg-gray-500 dark:after:bg-primary-400 after:rounded-full',
-  inactive: 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white',
-  label: 'truncate relative',
-  icon: {
-    base: 'flex-shrink-0 w-5 h-5 relative',
-    active: 'text-gray-700 dark:text-gray-200',
-    inactive: 'text-gray-400 dark:text-gray-500 group-hover:text-gray-700 dark:group-hover:text-gray-200'
-  },
-  avatar: {
-    base: 'flex-shrink-0',
-    size: '2xs'
-  },
-  badge: {
-    base: 'flex-shrink-0 ms-auto relative rounded',
-    color: 'gray',
-    variant: 'solid',
-    size: 'xs'
-  }
-}
-"/>
-
 <div class="pb-10 pt-10">
 
   <ULandingGrid>
@@ -94,8 +65,8 @@ const featuredPreprints = [{
     <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Strafrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue" />
   </ULandingGrid>
 </div>
-<UIcon name="i-heroicons-arrow-path" class="w-5 h-5 mb-4 text-slate-400" />
-<div class="pb-20 flex justify-start gap-5">
+<UIcon name="i-heroicons-arrow-path" class="w-5 h-5 mb-4 mt-5 text-slate-400" />
+<div class="pb-12 flex justify-start gap-5">
 <UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">GG
 </UButton>
 <UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">BGB
@@ -111,7 +82,7 @@ const featuredPreprints = [{
 
 </div>
 
-<div class="text-4xl rounded-lg mt-2">
+<div class="text-4xl rounded-lg mt-0">
         For You
       </div>
 
