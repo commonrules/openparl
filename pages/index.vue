@@ -74,19 +74,21 @@ const featuredPreprints = [{
   </div>
 </a>
 
-<UIcon name="i-heroicons-arrow-path" class="w-5 h-5 mb-4 mt-12 text-slate-400" />
+<UIcon name="i-heroicons-arrow-path" class="w-5 h-5 mb-4 mt-16 text-slate-400" />
 <div class="pb-5 flex justify-start gap-5">
 <UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100"><span class="text-slate-400">mibressler/</span><span>GG</span>
   <template #leading>
       <UAvatar
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"
+        src="https://pbs.twimg.com/profile_images/1295402247640227840/EyEx_ve9_400x400.jpg"
         size="2xs"
       />
     </template>
 </UButton>
 <UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">BGB
 </UButton>
-<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">DAT.24007
+<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">Digitale-D-G
+</UButton>
+<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100"><span class="text-slate-400">openparl:</span><span>DAT.24007</span>
   <template #leading>
       <UAvatar
         src="http://localhost:3000/logoblack.png"
@@ -94,6 +96,17 @@ const featuredPreprints = [{
       />
     </template>
 </UButton>
+<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100"><span class="text-slate-400">beck:</span><span>KIR 2024, 77</span>
+  <template #leading>
+      <UAvatar
+        src="https://presse.beck.de/media/2ileyyfj/chbeck-bildmarke.jpg"
+        size="2xs"
+      />
+    </template>
+</UButton>
+<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">GG
+</UButton>
+
 
 </div>
 
