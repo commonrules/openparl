@@ -15,42 +15,41 @@ const links = [{
 }, {
   label: 'Updates',
 }]
-
-const featuredLaws = [{
+const featuredRepos = [{
   owner: 'Bundestag',
   name: 'GG',
   about: 'Grundgesetz für die Bundesrepublik Deutschland',
   to: '/repo1',
-  avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png'
+  avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png',
+  nopreprint: '/',
 }, {
   owner: 'Bundestag',
   name: 'DDG',
   about: 'Digitale-Dienste-Gesetz',
   to: 'https://github.com/vueuse/vueuse',
-  avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png'
-}, ]
-
-const featuredRepos = [{
+  avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png',
+  nopreprint: '/',
+}, {
   owner: 'mibressler',
   name: 'BayDiGWiki',
   about: 'Wiki für das Bayerische Digitalgesetz',
   to: '/repo2',
-  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
+  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4',
+  nopreprint: '/',
 }, {
   owner: 'somedude27',
   name: 'openparl-feedback',
   about: 'Wiki für das Bayerische Digitalgesetz',
   to: 'https://github.com/vueuse/vueuse',
-  avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
-},]
-
-const featuredPreprints = [{
+  avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4',
+  nopreprint: '/',
+}, {
   owner: 'Vielmacher, A. et. al.',
   name: 'DAT.24007',
   about: 'Geltungskraft und Geltungsverlust von Rechtsnormen: Elemente einer Theorie der autoritativen Normgeltungsbeendigung',
   to: '/dat.00203',
   avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
-}, ]
+},]
 </script>
 
 <template>
@@ -117,14 +116,14 @@ const featuredPreprints = [{
       </div>
 
       <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in featuredLaws" :key="index" v-bind="module" class="pt-20 bg-slate-50 ring-0">
+    <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 ring-0">
       <div>
         <UAvatar :src="module.avatar" class="mb-2.5" />
       </div>
       <div>
         <span class="font-normal">{{ module.owner }}</span>
 
-        / <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+        <span> &nbsp;{{ module.nopreprint }}</span> <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
       </div>
       <div>
         <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
@@ -132,50 +131,7 @@ const featuredPreprints = [{
   
     </UPageCard>
   </UPageGrid>
-
-  <div class="text-4xl rounded-lg mt-2">
-        Featured Repositories
-      </div>
-
-      <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-48 ring-0">
-      <div>
-        <UAvatar :src="module.avatar" class="mb-2.5" />
-      </div>
-      <div>
-        <span class="font-normal">{{ module.owner }}</span>
-
-        / <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
-      </div>
-      <div>
-        <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
-      </div>
   
-    </UPageCard>
-  </UPageGrid>
-
-  <div class="text-4xl rounded-lg mt-2">
-        Featured Preprints
-      </div>
-
-      <UPageGrid class="pt-7 pb-10">
-    <UPageCard v-for="(module, index) in featuredPreprints" :key="index" v-bind="module" class="pt-20 bg-slate-50 max-w-48 ring-0">
-      <div>
-        <UAvatar :src="module.avatar" class="mb-2.5" />
-      </div>
-      <div>
-        
-
-         <span class="hyphens-manual  line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
-         <span class="font-normal">{{ module.owner }}</span>
-      </div>
-      <div>
-        <span class="mt-2 line-clamp-4 text-slate-500 text-sm">{{ module.about }}</span>
-        
-      </div>
-  
-    </UPageCard>
-  </UPageGrid>
 
 </template>
 
