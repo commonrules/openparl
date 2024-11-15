@@ -6,15 +6,13 @@ useHead({
 
 
 const links = [{
-  label: 'Scientific',
+  label: 'Scientific Discussion',
 
   to: '/discussion'
 }, {
-  label: 'Political',
+  label: 'Political Discussion',
   to: '/components/horizontal-navigation'
-}, {
-  label: 'Updates',
-}]
+},]
 
 const featuredLaws = [{
   owner: 'Bundestag',
