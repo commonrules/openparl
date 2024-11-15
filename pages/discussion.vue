@@ -12,6 +12,7 @@ const links = [
     to: '/getting-started/installation'
   },], [{
     label: 'Scientific Discussion',
+    to: '/discussion'
 
   }, {
     label: 'Archive of Political Discussion',
@@ -92,7 +93,7 @@ const featuredPreprints = [{
 }
 "/>
 
-<div class="text-4xl rounded-lg mt-2">
+<div class="text-4xl rounded-lg mt-10">
         Featured Bills
       </div>
 
