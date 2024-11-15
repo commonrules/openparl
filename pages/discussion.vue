@@ -6,11 +6,11 @@ useHead({
 
 
 const links = [{
-  label: 'Frontpage',
+  label: 'Scientific',
 
-  to: '/'
+  to: '/discussion'
 }, {
-  label: 'Political Discussion',
+  label: 'Political',
   to: '/components/horizontal-navigation'
 }, {
   label: 'Updates',
@@ -55,23 +55,7 @@ const featuredPreprints = [{
 
 <template>
 
-<a href="https://www.youtube.com/watch?v=sES2J__1PiY">
-<div class="relative">
-    <Carousel class="mt-10 rounded-3xl"/>
-    <div class="absolute inset-0 flex items-end justify-start z-10 m-10">
-        <div>
-      <div class="text-7xl text-white p-4 rounded-lg">
-        200. Sitzung des Deutschen Bundestages
-      </div>
-      <div class="text-xl font-bold text-white p-4 pt-0 rounded-lg flex justify-start">
-        <div class="mr-4 mt-2 w-3 h-3 bg-red-500 rounded-full animate-flash"></div>
-        LIVE
-      </div>
-      
-    </div>
-    </div>
-  </div>
-</a>
+
 
 
 <UHorizontalNavigation :links="links" class="mt-5" :ui="{
@@ -79,9 +63,9 @@ const featuredPreprints = [{
   container: 'flex items-center min-w-0',
   inner: 'min-w-0',
   base: 'group relative w-full flex items-center gap-1.5 px-2.5 py-3.5 rounded-md font-normal text-sm focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 disabled:cursor-not-allowed disabled:opacity-75',
-  before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-gray-50 dark:hover:before:bg-gray-800/50',
+  before: 'before:absolute before:inset-x-0 before:inset-y-2 before:inset-px before:rounded-md hover:before:bg-white dark:hover:before:bg-gray-800/50',
   after: 'after:absolute after:bottom-0 after:inset-x-2.5 after:block after:h-[2px] after:mt-2',
-  active: 'text-gray-900 dark:text-white after:bg-gray-500 dark:after:bg-primary-400 after:rounded-full',
+  active: 'text-gray-900 dark:text-white after:bg-white dark:after:bg-primary-400 after:rounded-full',
   inactive: 'text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white',
   label: 'truncate relative',
   icon: {
