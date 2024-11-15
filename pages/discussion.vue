@@ -11,6 +11,10 @@ const links = [
     icon: 'i-heroicons-chevron-down',
     to: '/getting-started/installation'
   },], [{
+    label: 'Activity',
+    to: '/discussion2'
+
+  },{
     label: 'Scientific Discussion',
     to: '/discussion'
 
