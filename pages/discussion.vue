@@ -11,12 +11,16 @@ const links = [
     icon: 'i-heroicons-chevron-down',
     to: '/getting-started/installation'
   },], [{
+    label: 'Combined Feed',
+    to: '/discussion'
+
+  },{
     label: 'Activity',
     to: '/discussion2'
 
   },{
     label: 'Scientific Discussion',
-    to: '/discussion'
+    to: '/discussion2'
 
   }, {
     label: 'Archive of Political Discussion',
