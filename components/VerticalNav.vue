@@ -85,7 +85,7 @@ const bottomlinks = [
 
 
 
-<div class="mt-20 border-b-2 border-slate-200 max-w-36 ml-4" >&nbsp</div>
+<div class="mt-0 border-b-2 border-slate-200 max-w-36 ml-4" >&nbsp</div>
 <UVerticalNavigation :links="bottomlinks"  :ui="{
     wrapper: 'relative',
     base: 'group relative flex items-center gap-1.5 focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-1 focus-visible:before:ring-primary-500 dark:focus-visible:before:ring-primary-400 before:absolute before:inset-px before:rounded-md disabled:cursor-not-allowed disabled:opacity-75',
