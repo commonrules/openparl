@@ -83,12 +83,8 @@ const bottomlinks = [
     }
 "/>
 
-<div class="mt-5">&nbsp;</div>
-<div class="mt-20">&nbsp;</div>
-<div class="mt-20">&nbsp;</div>
-<div class="mt-20">&nbsp;</div>
-<div class="mt-20">&nbsp;</div>
-<div class="mt-20">&nbsp;</div>
+
+
 <div class="mt-20 border-b-2 border-slate-200 max-w-36 ml-4" >&nbsp</div>
 <UVerticalNavigation :links="bottomlinks"  :ui="{
     wrapper: 'relative',
