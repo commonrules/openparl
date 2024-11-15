@@ -83,14 +83,12 @@ const bottomlinks = [
     }
 "/>
 
-<div class="mt-64">.</div>
-<div class="mt-16">.</div>
-<div class="mt-64">
+<div class="mt-20 border-b-2 border-slate-200 max-w-48" >.</div>
 <UVerticalNavigation :links="bottomlinks"  :ui="{
     wrapper: 'relative',
     base: 'group relative flex items-center gap-1.5 focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:before:ring-inset focus-visible:before:ring-1 focus-visible:before:ring-primary-500 dark:focus-visible:before:ring-primary-400 before:absolute before:inset-px before:rounded-md disabled:cursor-not-allowed disabled:opacity-75',
     ring: 'focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400',
-    padding: 'px-4 py-3 my-3 max-w-[calc(95%-10rem)]',
+    padding: 'px-4 py-4 my-3 max-w-[calc(95%-10rem)]',
     width: 'w-full',
     rounded: 'rounded-md',
     font: 'font-medium',
@@ -121,8 +119,7 @@ const bottomlinks = [
     }
 "/>
 
-<div class="text-xs text-gray-500 mt-10 ml-4">© 2024 Openparl</div>
-<div class="text-xs text-gray-500 mt-2 ml-4">About · Blog · Impressum · Datenschutz</div> 
-</div>
+
+
 
 </template>
