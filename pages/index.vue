@@ -159,6 +159,26 @@ const featuredRepos = [{
   
     </UPageCard>
   </UPageGrid>
+
+  <div class="flex justify-between">
+    <div class="w-1/2">
+      <div class="text-4xl rounded-lg mt-8">
+        Box
+      </div>
+
+    </div>
+    <div class="w-1/2">
+      <div class="text-4xl rounded-lg mt-8">
+        Changelog
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="text-4xl rounded-lg mt-8">
+        Feed
+      </div>
   
 
 </template>
