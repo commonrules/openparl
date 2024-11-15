@@ -6,11 +6,11 @@ useHead({
 
 
 const links = [{
-  label: 'Scientific Discussion',
+  label: 'Scientific discussion',
 
   to: '/discussion'
 }, {
-  label: 'Political Discussion',
+  label: 'Archive of political discussion',
   to: '/'
 },]
 
