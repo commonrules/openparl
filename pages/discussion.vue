@@ -5,14 +5,22 @@ useHead({
 })
 
 
-const links = [{
-  label: 'Scientific discussion',
+const links = [
+  [{
+    label: 'For You',
+    icon: 'i-heroicons-chevron-down',
+    to: '/getting-started/installation'
+  },], [{
+    label: 'Scientific Discussion',
 
-  to: '/discussion'
-}, {
-  label: 'Archive of political discussion',
-  to: '/'
-},]
+  }, {
+    label: 'Archive of Political Discussion',
+
+  }], [{
+    icon: 'i-heroicons-ellipsis-vertical',
+
+  }]
+]
 
 const featuredLaws = [{
   owner: 'Bundestag',
@@ -57,7 +65,7 @@ const featuredPreprints = [{
 
 
 <UHorizontalNavigation :links="links" class="mt-5" :ui="{
-  wrapper: 'relative w-full flex items-center justify-center',
+  wrapper: 'relative w-full flex items-center justify-between',
   container: 'flex items-center min-w-0',
   inner: 'min-w-0',
   base: 'group relative w-full flex items-center gap-1.5 px-2.5 py-3.5 rounded-md font-normal text-sm focus:outline-none focus-visible:outline-none dark:focus-visible:outline-none focus-visible:ring-inset focus-visible:ring-2 focus-visible:ring-primary-500 dark:focus-visible:ring-primary-400 disabled:cursor-not-allowed disabled:opacity-75',
