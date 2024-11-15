@@ -121,8 +121,8 @@ const bottomlinks = [
     }
 "/>
 
-<div class="text-xs text-gray-500 mt-10">© 2024 Openparl</div>
-<div class="text-xs text-gray-500 mt-2">About · Blog · Impressum · Datenschutz</div> 
+<div class="text-xs text-gray-500 mt-10 ml-4">© 2024 Openparl</div>
+<div class="text-xs text-gray-500 mt-2 ml-4">About · Blog · Impressum · Datenschutz</div> 
 </div>
 
 </template>
