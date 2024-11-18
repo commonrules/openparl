@@ -94,7 +94,7 @@ const feedsort = [ {
   </div>
 </a>
 
-<UIcon name="i-heroicons-arrow-path" class="w-5 h-5 mb-4 mt-16 text-slate-400" />
+<UIcon name="i-heroicons-arrow-uturn-left" class="w-5 h-5 mb-4 mt-16 text-slate-400" />
 <div class="pb-5 flex justify-start gap-5">
 <UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100"><span class="text-slate-400">mibressler/</span><span>GG</span>
   <template #leading>
