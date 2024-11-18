@@ -112,6 +112,17 @@ const featuredRepos = [{
 </div>
 
 
+<div class="flex justify-between">
+    <div class="">
+      <div class="text-4xl rounded-lg mt-8">
+        Feed  (Activity, new repos, discussion, new legislation activity, rulings) </div>
+
+    </div>
+
+
+  </div>
+
+
 
 <div class="text-4xl rounded-lg mt-8">
         Featured Repositories
@@ -138,20 +149,6 @@ const featuredRepos = [{
 
 
 
-  <div class="flex justify-between">
-    <div class="w-2/3">
-      <div class="text-4xl rounded-lg mt-8">
-        Feed      </div>
-
-    </div>
-    <div class="w-1/3">
-      <div class="text-4xl rounded-lg mt-8">
-        Activity
-      </div>
-
-    </div>
-
-  </div>
 
 
   <div class="text-4xl rounded-lg mt-8">
