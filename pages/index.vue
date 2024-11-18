@@ -67,7 +67,7 @@ const feedsort = [ {
   }, {
     label: 'Following',
     to: '/pro/templates',
-    icon: 'i-heroicons-computer-desktop',
+    icon: 'i-heroicons-queue-list',
     description: 'Chronologically sorted feed.'
   }]
 }, ]
