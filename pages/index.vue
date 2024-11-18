@@ -113,11 +113,11 @@ const featuredRepos = [{
 
 
 <div class="flex justify-between">
-    <div class="">
+
       <div class="text-4xl rounded-lg mt-8">
         Feed  (Activity, new repos, discussion, new legislation activity, rulings) </div>
+        <UButton icon="i-heroicons-chevron-down" variant="ghost">For You</UButton>
 
-    </div>
 
 
   </div>
