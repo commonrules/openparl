@@ -67,7 +67,7 @@ const links = [
 
   <div class="px-8">
     <div class="font-semibold pb-1">About</div>
-    <div class="text-md 2xl:w-3/5">With the rapid development of artificial intelligence technology, large language models (LLMs) have made significant progress in fields such as natural language processing, computer vision, and scientific tasks. However, as the scale of these models increases, optimizing resource consumption while maintaining high performance has become a key challenge. </div>
+    <div class="text-md 2xl:w-3/5 line-clamp-3">With the rapid development of artificial intelligence technology, large language models (LLMs) have made significant progress in fields such as natural language processing, computer vision, and scientific tasks. However, as the scale of these models increases, optimizing resource consumption while maintaining high performance has become a key challenge. </div>
   </div>
 
   <div class="px-8 pt-2 font-semibold text-blue-600"><a href="google.com">projectwebsite.org</a></div>
