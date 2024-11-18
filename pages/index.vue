@@ -63,7 +63,7 @@ const feedsort = [ {
     label: 'For You',
     to: '/pro/pricing',
     icon: 'i-heroicons-heart',
-    description: 'algorithmically tailored, see our algorithm <here>.'
+    description: 'See our algorithm <here>.'
   }, {
     label: 'Following',
     to: '/pro/templates',
