@@ -10,7 +10,7 @@
   <td></td>
 </tr>
 <tr>
-  <td class="pr-5">(1)</td>
+  <td class="pr-5 text-slate-500">(1)</td>
   <td><span class="text-slate-400">¹</span></td>
   <td>Die Würde des Menschen ist unantastbar.</td>
 </tr>
@@ -21,14 +21,14 @@
 </tr>
 <tr style="height:10px"><td colspan="5"></td></tr>
 <tr>
-  <td class="pr-5">(2)</td>
+  <td class="pr-5 text-slate-500">(2)</td>
   <td><span class="text-slate-400">¹</span></td>
   <td>Das Deutsche Volk bekennt sich darum zu unverletzlichen und unveräußerlichen Menschenrechten als Grundlage jeder menschlichen Gemeinschaft, des Friedens und der Gerechtigkeit in der Welt.</td>
 </tr>
 
 <tr style="height:10px"><td colspan="5"></td></tr>
 <tr>
-  <td class="pr-5">(3)</td>
+  <td class="pr-5 text-slate-500">(3)</td>
   <td><span class="text-slate-400">¹</span></td>
   <td>Die nachfolgenden Grundrechte binden Gesetzgebung, vollziehende Gewalt und Rechtsprechung als unmittelbar geltendes Recht.</td>
 </tr>
