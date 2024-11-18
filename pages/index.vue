@@ -63,12 +63,12 @@ const feedsort = [ {
     label: 'For You',
     to: '/pro/pricing',
     icon: 'i-heroicons-heart',
-    description: 'A simple pricing, for solo developers or teams.'
+    description: 'algorithmically tailored, see our algorithm <here>.'
   }, {
     label: 'Following',
     to: '/pro/templates',
     icon: 'i-heroicons-computer-desktop',
-    description: 'Get started with one of our official templates.'
+    description: 'Chronologically sorted feed.'
   }]
 }, ]
 </script>
