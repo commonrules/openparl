@@ -52,6 +52,25 @@ const featuredRepos = [{
   preprintname: 'Vielmacher, A. et. al',
   preprintabout: 'Vielmacher, A. et. al'
 },]
+
+
+
+const feedsort = [ {
+  label: 'For You',
+  icon: 'i-heroicons-square-3-stack-3d',
+  to: '/pro',
+  children: [{
+    label: 'For You',
+    to: '/pro/pricing',
+    icon: 'i-heroicons-heart',
+    description: 'A simple pricing, for solo developers or teams.'
+  }, {
+    label: 'Following',
+    to: '/pro/templates',
+    icon: 'i-heroicons-computer-desktop',
+    description: 'Get started with one of our official templates.'
+  }]
+}, ]
 </script>
 
 <template>
@@ -116,7 +135,11 @@ const featuredRepos = [{
 
       <div class="text-4xl rounded-lg mt-8">
         Feed  (Activity, new repos, discussion, new legislation activity, rulings) </div>
-        <UButton icon="i-heroicons-chevron-down" variant="ghost">For You</UButton>
+
+
+      
+
+      <UHeaderLinks :links="feedsort" />
 
 
 
