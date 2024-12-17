@@ -5,7 +5,7 @@
   <div class="">
     <UCommandPalette
     :empty-state="null"
-    placeholder="Crtl K to search, issue commands (find Norms) or ask model"
+    placeholder="Suche"
     class="bg-slate-100 dark:bg-gray-800 rounded-2xl"
   />
   </div>
