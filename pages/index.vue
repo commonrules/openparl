@@ -1,31 +1,44 @@
-<script setup lang="ts">
+<script setup lang="js">
 
 useHead({
   title: 'Rechtsprechungsdatenbank',
-})
+});
 
 import { ref, onMounted } from 'vue';
 import { createClient } from '@supabase/supabase-js';
 
 // Initialize Supabase client
-const supabaseUrl = 'https://klehrshrqiyqmwctddjr.supabase.co'; // Replace with your project URL
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtsZWhyc2hycWl5cW13Y3RkZGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODg2MDIsImV4cCI6MjA0ODU2NDYwMn0.BJq9hVM-H2MFccf9v2vByAzrFKhWVvgR5zFEgAg-iVk'; // Replace with your anon key
+const supabaseUrl = 'https://klehrshrqiyqmwctddjr.supabase.co';
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtsZWhyc2hycWl5cW13Y3RkZGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODg2MDIsImV4cCI6MjA0ODU2NDYwMn0.BJq9hVM-H2MFccf9v2vByAzrFKhWVvgR5zFEgAg-iVk';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Reactive data for court rulings
 const rulings = ref([]);
+const featuredRepos = ref([]); // Initialize as reactive
 
 // Fetch data when the component is mounted
 const fetchRulings = async () => {
   try {
+    // Fetch data from baywidi_urteile and include related data from gerichte
     const { data, error } = await supabase
-      .from('court_rulings')
-      .select('*, courts(court_name)');
+      .from('baywidi_urteile')
+      .select('id, aktenzeichen, aktenzeichen_display, category, date, tags, type, gerichte(gericht_name, gericht_logo, gericht_abk_display)');
+    
     if (error) {
       console.error('Error fetching data:', error);
-    } else {
-      rulings.value = data; // Update reactive property
+      return;
     }
+
+    rulings.value = data; // Update rulings with fetched data
+
+    // Map the fetched data to the featuredRepos format
+    featuredRepos.value = rulings.value.map(ruling => ({
+      owner: ruling.gerichte.gericht_abk_display || ruling.gerichte.gericht_name || 'Unknown Court', // Court abbreviation or name
+      name: ruling.aktenzeichen_display || ruling.aktenzeichen || 'Unknown Case', // Aktenzeichen or display field
+      about: `Category: ${ruling.category || 'N/A'}, Type: ${ruling.type || 'N/A'}`, // Description combining category and type
+      to: `/details/${ruling.id}`, // Generate a dynamic link based on ruling ID
+      avatar: ruling.gerichte.gericht_logo || 'https://via.placeholder.com/150', // Court logo or placeholder image
+    }));
   } catch (err) {
     console.error('Unexpected error:', err);
   }
@@ -34,22 +47,8 @@ const fetchRulings = async () => {
 // Automatically fetch data when the component mounts
 onMounted(fetchRulings);
 
-const featuredRepos = [{
-  owner: 'mibressler',
-  name: 'BayDiGWiki',
-  about: 'Wiki für das Bayerische Digitalgesetz',
-  to: '/repo2',
-  avatar: 'https://avatars.githubusercontent.com/u/53796824?v=4'
-}, {
-  owner: 'somedude27',
-  name: 'openparl-feedback',
-  about: 'Wiki für das Bayerische Digitalgesetz',
-  to: 'https://github.com/vueuse/vueuse',
-  avatar: 'https://avatars.githubusercontent.com/u/53796854?v=4'
-}]
-
-
 </script>
+
 
 <template>
 
