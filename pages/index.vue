@@ -82,9 +82,9 @@ onMounted(fetchRulingsAndTags);
 
   <div class="pb-10 pt-10">
     <ULandingGrid>
-      <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="IT-Sicherheitsrecht" description="Choose a primary and a gray color from your Tailwind CSS color palette." color="blue"/>
-      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Internetrecht" description="Change the style of any component in your App Config or with ui prop." color="blue"/>
-      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Datenschutzrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue" />
+      <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="IT-Sicherheitsrecht" description="Choose a primary and a gray color from your Tailwind CSS color palette." color="blue" to="/IT-Sicherheitsrecht"/>
+      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Internetrecht" description="Change the style of any component in your App Config or with ui prop." color="blue" to="/Internetrecht"/>
+      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Datenschutzrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue"to="/Datenschutzrecht" />
     </ULandingGrid>
   </div>
   
