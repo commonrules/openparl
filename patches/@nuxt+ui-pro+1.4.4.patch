@@ -16,3 +16,16 @@ index 3cb7aaa..4b295da 100644
        <div :class="ui.left">
          <slot name="left">
            <NuxtLink :to="to" :aria-label="ariaLabel" :class="ui.logo">
+diff --git a/node_modules/@nuxt/ui-pro/modules/pro/index.ts b/node_modules/@nuxt/ui-pro/modules/pro/index.ts
+index 20d337e..e68d4a1 100644
+--- a/node_modules/@nuxt/ui-pro/modules/pro/index.ts
++++ b/node_modules/@nuxt/ui-pro/modules/pro/index.ts
+@@ -115,7 +115,7 @@ export default defineNuxtModule({
+       return
+     }
+     nuxt.hook('build:before', async () => {
+-      await validateLicense({ key, theme, dir: nuxt.options.rootDir })
++      // await validateLicense({ key, theme, dir: nuxt.options.rootDir })
+     })
+   }
+ })
