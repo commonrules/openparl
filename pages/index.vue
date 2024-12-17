@@ -96,7 +96,7 @@ onMounted(fetchRulingsAndTags);
       :key="index"
       size="xl"
       variant="soft"
-      :class="{'bg-blue-500 text-white': selectedTags.includes(tag), 'bg-slate-100': !selectedTags.includes(tag)}"
+      :class="{'bg-slate-500 hover:bg-slate-500 text-white': selectedTags.includes(tag), 'bg-slate-100': !selectedTags.includes(tag)}"
       @click="toggleTag(tag)"
     >
       {{ tag }}
