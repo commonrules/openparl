@@ -105,7 +105,61 @@ onMounted(fetchRulingsAndTags);
   
   <!-- Filtered Repos Section -->
   <div class="text-4xl rounded-lg mt-8">
-    Alle Urteile
+    Redaktionell kommentierte Entscheidungen
+  </div>
+  
+  <UPageGrid class="pt-7 pb-10" :ui="{
+    wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8'
+  }">
+    <UPageCard
+      v-for="(module, index) in filteredRulings"
+      :key="index"
+      v-bind="module"
+      class="pt-20 bg-sky-100 ring-0"
+    >
+      <div>
+        <UAvatar :src="module.avatar" class="mb-2.5" />
+      </div>
+      <div>
+        <span class="font-normal">{{ module.owner }}</span>
+        <span class="pl-1">/</span>
+        <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+      </div>
+      <div>
+        <span class="mt-2 line-clamp-3 text-slate-500 text-sm">{{ module.about }}</span>
+      </div>
+    </UPageCard>
+  </UPageGrid>
+
+  <div class="text-4xl rounded-lg mt-8">
+    LLM-kommentierte Entscheidungen
+  </div>
+  
+  <UPageGrid class="pt-7 pb-10" :ui="{
+    wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8'
+  }">
+    <UPageCard
+      v-for="(module, index) in filteredRulings"
+      :key="index"
+      v-bind="module"
+      class="pt-20 bg-green-100 ring-0"
+    >
+      <div>
+        <UAvatar :src="module.avatar" class="mb-2.5" />
+      </div>
+      <div>
+        <span class="font-normal">{{ module.owner }}</span>
+        <span class="pl-1">/</span>
+        <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+      </div>
+      <div>
+        <span class="mt-2 line-clamp-3 text-slate-500 text-sm">{{ module.about }}</span>
+      </div>
+    </UPageCard>
+  </UPageGrid>
+
+  <div class="text-4xl rounded-lg mt-8">
+    Alle Entscheidungen
   </div>
   
   <UPageGrid class="pt-7 pb-10" :ui="{
