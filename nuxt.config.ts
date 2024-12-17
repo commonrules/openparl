@@ -2,6 +2,6 @@
 export default defineNuxtConfig({
   extends: ['@nuxt/ui-pro'],
   devtools: { enabled: true },
-  modules: ["@nuxt/ui"]
-
+  modules: ["@nuxt/ui"],
+  compatibilityDate: "2024-12-17"
 })

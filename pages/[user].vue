@@ -24,7 +24,7 @@ const selectedTags = ref([]); // Tags selected by the user
 const fetchRulingsAndTags = async () => {
   try {
     // Extract the court abbreviation from route parameters
-    const courtAbk = route.params.preprint?.toUpperCase();
+    const courtAbk = route.params.user?.toUpperCase();
 
     if (!courtAbk) {
       errorMessage.value = 'Invalid route parameters.';
@@ -110,7 +110,7 @@ onMounted(fetchRulingsAndTags);
   
   <!-- Filtered Repos Section -->
   <div class="text-4xl rounded-lg mt-8">
-    Alle Urteile
+    Alle Urteile des {{ route.params.user }}.
   </div>
   
   <UPageGrid class="pt-7 pb-10" :ui="{

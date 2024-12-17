@@ -44,7 +44,7 @@ const fetchRuling = async () => {
       .single();
 
     if (error) {
-      errorMessage.value = 'Ruling not found.';
+      errorMessage.value = 'Urteil nicht gefunden.';
       console.error(error);
       return;
     }
