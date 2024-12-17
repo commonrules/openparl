@@ -27,6 +27,7 @@ const errorMessage = ref(null);
 const caseTitle = ref('');
 const caseType = ref('');
 const caseDate = ref('');
+const tags = ref([]); // Tags for the court ruling
 
 // Fetch the ruling based on the route parameters
 const fetchRuling = async () => {
@@ -42,7 +43,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, aktenzeichen_display, title, date, type, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, aktenzeichen_display, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -61,6 +62,7 @@ const fetchRuling = async () => {
     caseTitle.value = data.title;
     caseType.value = data.type;
     caseDate.value = new Date(data.date).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+    tags.value = data.tags || []; 
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
@@ -81,23 +83,8 @@ const links = [
   icon: 'i-heroicons-book-open',
   to: route.path,
 }, ], [{
-    label: '0d128d · Fassung vom 18.07.1998',
+    label: caseDate,
     labelClass: 'font-normal'
-  },{
-    label: 'Markup (logic, blame, discussion)',
-    icon: 'i-heroicons-chevron-down',
-    labelClass: 'font-normal'
-  }, {
-    label: 'Preview',
-  }, {
-    label: 'Code',
-  }, 
-  {
-    label: 'Open',
-    labelClass: 'bg-gray-600 text-white pr-3 pl-3 pt-1 pb-1 rounded-md mb-0 mt-0',
-  }, 
-  {
-    icon: 'i-heroicons-heart'
   },{
     icon: 'i-heroicons-ellipsis-vertical'
    }]
@@ -172,7 +159,7 @@ const links = [
       :src=courtLogo
       alt="Avatar"
     />
-  <div class="mx-4">{{ courtNameFull }}</div>
+  <div class="mx-4 ml-3">{{ courtNameFull }}</div>
   
   
   
@@ -181,80 +168,20 @@ const links = [
 
 
   <div class="px-8">
-  
 
-    <UButton color="gray" class="mt-1 mb-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">mibressler/</span><span>baydigwiki</span>
-    <template #leading>
-      <UAvatar
-        src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-        size="3xs"
-      />
-    </template>
-  </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">arxiv:</span><span>2408.00203</span>
-    <template #leading>
-      <UAvatar
-        src="https://cdn.icon-icons.com/icons2/2389/PNG/512/arxiv_logo_icon_145478.png"
-        size="3xs"
-      />
-    </template>
-  </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">mibressler/</span><span>llama-finetune3</span>
-    <template #leading>
-      <UAvatar
-        src="https://cdn.worldvectorlogo.com/logos/huggingface-2.svg"
-        size="3xs"
-      />
-    </template>
-  </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">beck:</span><span>FHOeffR 11 Nr. 4148</span>
-    <template #leading>
-      <UAvatar
-        src="https://presse.beck.de/media/2ileyyfj/chbeck-bildmarke.jpg"
-        size="3xs"
-      />
-    </template>
-  </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">juris:</span><span>KIR 2024, 77</span>
-    <template #leading>
-      <UAvatar
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Juris.svg/602px-Juris.svg.png"
-        size="3xs"
-      />
-    </template>
-  </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">Bundestag/</span><span>DDG Art. 1</span>
-    <template #leading>
-      <UAvatar
-        src="/logoblack.png"
-        size="3xs"
-      />
-    </template>
-  </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">-qhhz-0AAAAJ:</span><span>J-pR_7NvFogC</span>
-    <template #leading>
-      <UAvatar
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Google_Scholar_logo.svg/1200px-Google_Scholar_logo.svg.png"
-        size="3xs"
-      />
-    </template>
-  </UButton>
-  <UButton color="gray" class="mt-1 mb-4 ml-4 rounded-full bg-slate-100" variant="ghost" size="sm">
-      <span class="pl-1 text-gray-400">openparl:</span><span>DAT.00203</span>
-    <template #leading>
-      <UAvatar
-        src="/logoblack.png"
-        size="3xs"
-      />
-    </template>
-  </UButton>
+    <div v-if="tags.length > 0" class="flex flex-wrap gap-2 mb-4">
+        <UButton
+          v-for="(tag, index) in tags"
+          :key="index"
+          color="gray"
+          class="rounded-full bg-slate-100"
+          variant="ghost"
+          size="sm"
+        >
+          {{ tag }}
+        </UButton>
+      </div>
+
     <div class="font-semibold pb-1">About</div>
 
     <div class="text-md 2xl:w-3/5 line-clamp-3">With the rapid development of artificial intelligence technology, large language models (LLMs) have made significant progress in fields such as natural language processing, computer vision, and scientific tasks. However, as the scale of these models increases, optimizing resource consumption while maintaining high performance has become a key challenge. </div>
