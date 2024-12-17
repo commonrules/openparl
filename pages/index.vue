@@ -12,14 +12,15 @@ const supabaseUrl = 'https://klehrshrqiyqmwctddjr.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtsZWhyc2hycWl5cW13Y3RkZGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODg2MDIsImV4cCI6MjA0ODU2NDYwMn0.BJq9hVM-H2MFccf9v2vByAzrFKhWVvgR5zFEgAg-iVk';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Reactive data for court rulings
+// Reactive data for court rulings and tags
 const rulings = ref([]);
-const featuredRepos = ref([]); // Initialize as reactive
+const featuredRepos = ref([]);
+const uniqueTags = ref([]); // Reactive array for unique tags
 
-// Fetch data when the component is mounted
-const fetchRulings = async () => {
+// Fetch court rulings and tags
+const fetchRulingsAndTags = async () => {
   try {
-    // Fetch data from baywidi_urteile and include related data from gerichte
+    // Fetch data from baywidi_urteile with related courts
     const { data, error } = await supabase
       .from('baywidi_urteile')
       .select('id, aktenzeichen, aktenzeichen_display, category, date, tags, title, type, gerichte(gericht_name, gericht_logo, gericht_abk, gericht_abk_display)');
@@ -29,7 +30,11 @@ const fetchRulings = async () => {
       return;
     }
 
-    rulings.value = data; // Update rulings with fetched data
+    rulings.value = data;
+
+    // Extract and deduplicate tags
+    const allTags = data.flatMap(ruling => ruling.tags || []); // Combine all tags into a single array
+    uniqueTags.value = [...new Set(allTags)]; // Deduplicate tags and assign to uniqueTags
 
     // Map the fetched data to the featuredRepos format
     featuredRepos.value = rulings.value.map(ruling => ({
@@ -45,64 +50,66 @@ const fetchRulings = async () => {
 };
 
 // Automatically fetch data when the component mounts
-onMounted(fetchRulings);
+onMounted(fetchRulingsAndTags);
 
 </script>
 
 
+
 <template>
 
-<div class="pb-10 pt-10">
-
-  <ULandingGrid>
-    <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="IT-Sicherheitsrecht" description="Choose a primary and a gray color from your Tailwind CSS color palette." color="blue"/>
-    <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Internetrecht" description="Change the style of any component in your App Config or with ui prop." color="blue"/>
-    <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Datenschutzrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue" />
-  </ULandingGrid>
-</div>
-<UIcon name="i-heroicons-folder-open" class="w-5 h-5 mb-4 mt-5 text-slate-400" />
-<div class="pb-12 flex justify-start gap-5">
-<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">GG
-</UButton>
-<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">BGB
-</UButton>
-<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">DDG
-</UButton>
-<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">Digitale-D-G
-</UButton>
-<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">HormBetrG
-</UButton>
-<UButton size="xl" variant="soft"  to="/repo1" class="bg-slate-100">SGB
-</UButton>
-
-</div>
-
-<div class="text-4xl rounded-lg mt-8">
-        Alle Urteile
-      </div>
-
-      <UPageGrid class="pt-7 pb-10" :ui="{
-  wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8'
-}">
-    <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 ring-0">
+  <div class="pb-10 pt-10">
+    <ULandingGrid>
+      <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="IT-Sicherheitsrecht" description="Choose a primary and a gray color from your Tailwind CSS color palette." color="blue"/>
+      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Internetrecht" description="Change the style of any component in your App Config or with ui prop." color="blue"/>
+      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Datenschutzrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue" />
+    </ULandingGrid>
+  </div>
+  
+  <!-- Tags Section -->
+  <div class="pb-12 flex justify-start gap-5">
+    <UButton
+      v-for="(tag, index) in uniqueTags"
+      :key="index"
+      size="xl"
+      variant="soft"
+      :to="`/tags/${tag}`" 
+      class="bg-slate-100"
+    >
+      {{ tag }}
+    </UButton>
+  </div>
+  
+  <!-- Featured Repos Section -->
+  <div class="text-4xl rounded-lg mt-8">
+    Alle Urteile
+  </div>
+  
+  <UPageGrid class="pt-7 pb-10" :ui="{
+    wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8'
+  }">
+    <UPageCard
+      v-for="(module, index) in featuredRepos"
+      :key="index"
+      v-bind="module"
+      class="pt-20 bg-slate-50 ring-0"
+    >
       <div>
         <UAvatar :src="module.avatar" class="mb-2.5" />
       </div>
       <div>
         <span class="font-normal">{{ module.owner }}</span>
-
-        <span class="pl-1">/</span> <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+        <span class="pl-1">/</span>
+        <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
       </div>
       <div>
         <span class="mt-2 line-clamp-3 text-slate-500 text-sm">{{ module.about }}</span>
       </div>
-  
     </UPageCard>
   </UPageGrid>
-
-
-
-</template>
+  
+  </template>
+  
 
 <style scoped>
 @keyframes flash {
