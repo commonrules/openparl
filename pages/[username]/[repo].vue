@@ -20,6 +20,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 // Extract the route and initialize reactive properties
 const route = useRoute();
 const courtName = ref('');
+const courtLogo = ref('');
 const caseNumber = ref('');
 const errorMessage = ref(null);
 
@@ -37,7 +38,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, gerichte(gericht_abk, gericht_name)')
+      .select('id, aktenzeichen, aktenzeichen_display, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -49,8 +50,9 @@ const fetchRuling = async () => {
     }
 
     // Update reactive properties
-    courtName.value = data.gerichte.gericht_name;
-    caseNumber.value = data.aktenzeichen;
+    courtName.value = data.gerichte.gericht_abk_display;
+    caseNumber.value = data.aktenzeichen_display;
+    courtLogo.value = data.gerichte.gericht_logo;
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
