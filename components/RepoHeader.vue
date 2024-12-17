@@ -76,19 +76,13 @@ class="no-border group bg-slate-50 dark:bg-gray-800"
 
     <template #left>
 
-
-      <a><Logo size="xs" class="opacity-60" @click="isNavOpen = true" /></a>
-        <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">Bundestag</div>
-       <div class="mb-1">/</div>
-        <div class="hover:bg-slate-50 hover:rounded px-1 mb-1">GG</div>
-        <div class="hover:bg-slate-50 hover:rounded px-1 text-slate-400 mb-1">
-          Art. 1 Abs. 2 S. 1</div>
+<div class="flex items-center">
+      <LogoMin size="" class="" />
+        <div class=" px-1 ml-4">LG Kiel</div>
+       <div class="px-1 text-slate-400">/</div>
+        <div class=" px-1 text-slate-400">Verg 37 23/23</div>
   
-
-      <UDropdown :items="items" mode="hover" :popper="{ placement: 'right-start' }">
-        <UIcon name="i-heroicons-chevron-right" class=" w-4 h-4 opacity-0 group-hover:opacity-50 transition-opacity duration-300" />
-  </UDropdown>
-
+        </div>
 
     </template>
 
@@ -98,7 +92,7 @@ class="no-border group bg-slate-50 dark:bg-gray-800"
 
     <template #right>
 
-      <Avatar />
+ 
       
     </template>
 
@@ -108,28 +102,8 @@ class="no-border group bg-slate-50 dark:bg-gray-800"
   </UHeader>
 
 
-  <UContextMenu v-model="isOpen" :virtual-element="virtualElement">
-      <div class="p-4">
-        Also copy paste menu
-      </div>
-    </UContextMenu>
 
-    <USlideover v-model="isNavOpen" side="left" >
-      <div class="p-4 flex-1">
-        <UButton
-          color="gray"
-          variant="ghost"
-          size="sm"
-          icon="i-heroicons-x-mark-20-solid"
-          class="flex sm:hidden absolute end-5 top-5 z-10"
-          square
-          padded
-          @click="isOpen = false"
-        />
-        <SlideOverNav />
-        <Placeholder class="h-full" />
-      </div>
-    </USlideover>
+
 
 </template>
 
