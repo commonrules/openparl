@@ -24,7 +24,7 @@ const fetchRulingsAndTags = async () => {
     // Fetch data from baywidi_urteile with related courts
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, aktenzeichen_display, category, date, tags, title, type, gerichte(gericht_name, gericht_logo, gericht_abk, gericht_abk_display)');
+      .select('id, aktenzeichen, aktenzeichen_display, aigenerated_text, redaktion_text, category, date, tags, title, type, gerichte(gericht_name, gericht_logo, gericht_abk, gericht_abk_display)');
     
     if (error) {
       console.error('Error fetching data:', error);
