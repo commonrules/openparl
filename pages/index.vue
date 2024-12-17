@@ -14,7 +14,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Reactive data for court rulings and tags
 const rulings = ref([]); // All rulings
-const featuredRepos = ref([]); // Filtered rulings
+const featuredRepos = ref([]); // Mapped rulings for display
 const uniqueTags = ref([]); // All unique tags
 const selectedTags = ref([]); // Tags selected by the user
 
@@ -25,7 +25,7 @@ const fetchRulingsAndTags = async () => {
     const { data, error } = await supabase
       .from('baywidi_urteile')
       .select('id, aktenzeichen, aktenzeichen_display, aigenerated_text, redaktion_text, category, date, tags, title, type, gerichte(gericht_name, gericht_logo, gericht_abk, gericht_abk_display)');
-    
+
     if (error) {
       console.error('Error fetching data:', error);
       return;
@@ -34,17 +34,19 @@ const fetchRulingsAndTags = async () => {
     rulings.value = data;
 
     // Extract and deduplicate tags
-    const allTags = data.flatMap(ruling => ruling.tags || []); // Combine all tags into a single array
-    uniqueTags.value = [...new Set(allTags)]; // Deduplicate tags and assign to uniqueTags
+    const allTags = data.flatMap(ruling => ruling.tags || []);
+    uniqueTags.value = [...new Set(allTags)];
 
-    // Initially, show all rulings in featuredRepos
+    // Map the fetched data to the featuredRepos format
     featuredRepos.value = rulings.value.map(ruling => ({
-      owner: ruling.gerichte.gericht_abk_display || ruling.gerichte.gericht_name || 'Unknown Court', // Court abbreviation or name
-      name: ruling.aktenzeichen_display || ruling.aktenzeichen || 'Unknown Case', // Aktenzeichen or display field
-      about: ruling.title || 'N/A', // Description combining category and type
-      to: `/${ruling.gerichte.gericht_abk}/${ruling.aktenzeichen}`, // Generate a dynamic link based on ruling ID
-      avatar: ruling.gerichte.gericht_logo || 'https://via.placeholder.com/150', // Court logo or placeholder image
-      tags: ruling.tags || [], // Include tags for filtering
+      owner: ruling.gerichte.gericht_abk_display || ruling.gerichte.gericht_name || 'Unknown Court',
+      name: ruling.aktenzeichen_display || ruling.aktenzeichen || 'Unknown Case',
+      about: ruling.title || 'N/A',
+      to: `/${ruling.gerichte.gericht_abk}/${ruling.aktenzeichen}`,
+      avatar: ruling.gerichte.gericht_logo || 'https://via.placeholder.com/150',
+      tags: ruling.tags || [],
+      redaktion_text: ruling.redaktion_text,
+      aigenerated_text: ruling.aigenerated_text
     }));
   } catch (err) {
     console.error('Unexpected error:', err);
@@ -67,7 +69,16 @@ const filteredRulings = computed(() => {
   }
   return featuredRepos.value.filter(repo =>
     selectedTags.value.every(tag => repo.tags.includes(tag))
-  ); // Show rulings matching all selected tags
+  );
+});
+
+// Computed properties for the specific sections
+const redaktionRulings = computed(() => {
+  return filteredRulings.value.filter(repo => repo.redaktion_text && repo.redaktion_text.trim() !== '');
+});
+
+const aigeneratedRulings = computed(() => {
+  return filteredRulings.value.filter(repo => repo.aigenerated_text && repo.aigenerated_text.trim() !== '');
 });
 
 // Automatically fetch data when the component mounts
@@ -78,13 +89,14 @@ onMounted(fetchRulingsAndTags);
 
 
 
+
 <template>
 
   <div class="pb-10 pt-10">
     <ULandingGrid>
       <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-lock-closed" title="IT-Sicherheitsrecht" description="Alle Urteile aus dem IT-Sicherheitsrecht." color="blue" to="/IT-Sicherheitsrecht"/>
       <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-globe-alt" title="Internetrecht" description="Alle Urteile aus dem Internetrecht" color="blue" to="/Internetrecht"/>
-      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-identification" title="Datenschutzrecht" description="Alle Urteile aus dem Datenschutzrecht" color="blue"to="/Datenschutzrecht" />
+      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-identification" title="Datenschutzrecht" description="Alle Urteile aus dem Datenschutzrecht" color="blue" to="/Datenschutzrecht" />
     </ULandingGrid>
   </div>
   
@@ -103,7 +115,7 @@ onMounted(fetchRulingsAndTags);
     </UButton>
   </div>
   
-  <!-- Filtered Repos Section -->
+  <!-- Redaktionell kommentierte Entscheidungen -->
   <div class="text-4xl rounded-lg mt-8">
     Redaktionell kommentierte Entscheidungen
   </div>
@@ -112,7 +124,7 @@ onMounted(fetchRulingsAndTags);
     wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8'
   }">
     <UPageCard
-      v-for="(module, index) in filteredRulings"
+      v-for="(module, index) in redaktionRulings"
       :key="index"
       v-bind="module"
       class="pt-20 bg-sky-100 ring-0"
@@ -131,6 +143,7 @@ onMounted(fetchRulingsAndTags);
     </UPageCard>
   </UPageGrid>
 
+  <!-- LLM-kommentierte Entscheidungen -->
   <div class="text-4xl rounded-lg mt-8">
     LLM-kommentierte Entscheidungen
   </div>
@@ -139,7 +152,7 @@ onMounted(fetchRulingsAndTags);
     wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8'
   }">
     <UPageCard
-      v-for="(module, index) in filteredRulings"
+      v-for="(module, index) in aigeneratedRulings"
       :key="index"
       v-bind="module"
       class="pt-20 bg-green-100 ring-0"
@@ -158,6 +171,7 @@ onMounted(fetchRulingsAndTags);
     </UPageCard>
   </UPageGrid>
 
+  <!-- Alle Entscheidungen -->
   <div class="text-4xl rounded-lg mt-8">
     Alle Entscheidungen
   </div>
@@ -186,6 +200,7 @@ onMounted(fetchRulingsAndTags);
   </UPageGrid>
   
 </template>
+
 
   
 
