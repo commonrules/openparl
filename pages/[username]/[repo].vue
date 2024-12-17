@@ -248,7 +248,7 @@ const links = [
 
       <div v-if="thema.length > 0" class="font-semibold pb-1">Gegenstand</div>
 
-<div v-if="thema.length > 0" class="text-md line-clamp-3"> {{ thema }}</div>
+<div v-if="thema.length > 0" class="text-md 2xl:w-2/5 line-clamp-3"> {{ thema }}</div>
 
     <div v-if="leitsatz.length > 0" class="font-semibold pt-2">Leitsatz</div>
 
