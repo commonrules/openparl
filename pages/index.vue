@@ -117,7 +117,7 @@ onMounted(fetchRulingsAndTags);
   
   <!-- Redaktionell kommentierte Entscheidungen -->
   <div class="text-4xl rounded-lg mt-8">
-    Redaktionell kommentierte Entscheidungen
+    Redaktionell kommentierte Entscheidungen.
   </div>
   
   <UPageGrid class="pt-7 pb-10" :ui="{
