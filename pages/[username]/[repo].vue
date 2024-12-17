@@ -192,8 +192,20 @@ const links = [
           <td class="text-slate-400">.wdwadw..</td>
         </tr>
         <tr>
+          <td class="pr-8">Spruchkörper</td>
+          <td class="text-slate-400">.wdwadw..</td>
+        </tr>
+        <tr>
           <td class="">ECLI</td>
           <td class="text-slate-400">ECLI:DE:OLGCE:2023:0224.9W16.23.00</td>
+        </tr>
+        <tr>
+          <td class="">Fundstelle</td>
+          <td class="text-slate-400">XXX</td>
+        </tr>
+        <tr>
+          <td class="">Vorinstanz</td>
+          <td class="text-slate-400">XXX</td>
         </tr>
       </table>
     </div>
@@ -202,8 +214,8 @@ const links = [
   
   </div>
 
-  <div class="px-8 pt-1 font-semibold text-blue-600"><a href="google.com">projectwebsite.org</a></div>
-  <div class="px-8 pt-2 font-normal text-gray-400 text-sm"><a href="google.com">MIT License</a></div>
+
+  <div class="px-8 pt-2 font-normal text-gray-400 text-sm"><a href="google.com">zuletzt aktualisiert am</a></div>
 
   
   </div>
