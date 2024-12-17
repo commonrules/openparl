@@ -67,6 +67,7 @@ onMounted(fetchRulingsAndTags);
   </div>
   
   <!-- Tags Section -->
+  <UIcon name="i-heroicons-folder-open" class="w-5 h-5 mb-4 mt-5 text-slate-400" />
   <div class="pb-12 flex justify-start gap-5">
     <UButton
       v-for="(tag, index) in uniqueTags"
