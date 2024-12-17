@@ -25,6 +25,8 @@ const courtLogo = ref('');
 const caseNumber = ref('');
 const errorMessage = ref(null);
 const caseTitle = ref('');
+const caseType = ref('');
+const caseDate = ref('');
 
 // Fetch the ruling based on the route parameters
 const fetchRuling = async () => {
@@ -40,7 +42,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, aktenzeichen_display, title, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, aktenzeichen_display, title, date, type, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -57,6 +59,8 @@ const fetchRuling = async () => {
     caseNumber.value = data.aktenzeichen_display;
     courtLogo.value = data.gerichte.gericht_logo;
     caseTitle.value = data.title;
+    caseType.value = data.type;
+    caseDate.value = new Date(data.date).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
@@ -156,7 +160,7 @@ const links = [
     links: 'flex flex-wrap items-center gap-1.5 mt-4 lg:mt-0'
   
   }"
-  title="Grundgesetz für die Bundesrepublik Deutschland"
+  :title="caseType + ' vom ' + caseDate"
   class="pl-8 no-border mt-0 pt-0 pb-0 bg-slate-50 dark:bg-gray-800"
   />
   <div class="bg-slate-50 dark:bg-gray-800 dark:bg-gray-800 rounded-2xl">
