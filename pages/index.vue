@@ -82,9 +82,9 @@ onMounted(fetchRulingsAndTags);
 
   <div class="pb-10 pt-10">
     <ULandingGrid>
-      <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="IT-Sicherheitsrecht" description="Alle Urteile aus dem IT-Sicherheitsrecht." color="blue" to="/IT-Sicherheitsrecht"/>
-      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Internetrecht" description="Alle Urteile aus dem Internetrecht" color="blue" to="/Internetrecht"/>
-      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Datenschutzrecht" description="Alle Urteile aus dem Datenschutzrecht" color="blue"to="/Datenschutzrecht" />
+      <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-lock-closed" title="IT-Sicherheitsrecht" description="Alle Urteile aus dem IT-Sicherheitsrecht." color="blue" to="/IT-Sicherheitsrecht"/>
+      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-globe-alt" title="Internetrecht" description="Alle Urteile aus dem Internetrecht" color="blue" to="/Internetrecht"/>
+      <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-identification" title="Datenschutzrecht" description="Alle Urteile aus dem Datenschutzrecht" color="blue"to="/Datenschutzrecht" />
     </ULandingGrid>
   </div>
   
