@@ -36,6 +36,7 @@ const lastUpdated = ref('');
 const vorinstanz = ref([]);
 const nachfolgend = ref([]);
 const leitsatz = ref([]);
+const thema = ref("");
 
 // Fetch the ruling based on the route parameters
 const fetchRuling = async () => {
@@ -51,7 +52,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, fundstelle, vorinstanz, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, fundstelle, vorinstanz, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -79,6 +80,7 @@ const fetchRuling = async () => {
     vorinstanz.value = data.vorinstanz || [];
     nachfolgend.value = data.nachfolgend || [];
     leitsatz.value = data.leitsatz || [];
+    thema.value = data.thema || '';
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
@@ -201,6 +203,12 @@ const links = [
     <div v-if="leitsatz.length > 0" class="font-semibold pb-1">Leitsatz</div>
 
     <div v-if="leitsatz.length > 0" class="text-md 2xl:w-3/5 line-clamp-3"> {{ leitsatz }}</div>
+
+    
+    <div v-if="thema.length > 0" class="font-semibold pb-1">Behandelt</div>
+
+    <div v-if="thema.length > 0" class="text-md 2xl:w-3/5 line-clamp-3"> {{ thema }}</div>
+
     <div class="text-md">
       <table class="mt-3 table-auto">
         <tr>
