@@ -74,6 +74,7 @@ const nachfolgend = ref([]);
 const leitsatz = ref([]);
 const thema = ref("");
 const redaktion_text = ref("");
+const redaktion_last_updated = ref("");
 
 // Fetch the ruling based on the route parameters
 const fetchRuling = async () => {
@@ -89,7 +90,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, redaktion_last_updated, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -119,6 +120,7 @@ const fetchRuling = async () => {
     leitsatz.value = data.leitsatz || [];
     thema.value = data.thema || '';
     redaktion_text.value = data.redaktion_text || '';
+    redaktion_last_updated.value = new Date(data.redaktion_last_updated).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
@@ -351,7 +353,7 @@ const links = [
       class=""
     />
     <span class="font-semibold pr-4 ml-4">Redaktionelle Einordnung</span></div>
-    <span class="pr-5 text-slate-400">vom</span>
+    <span class="pr-5 text-slate-400">vom {{ redaktion_last_updated }}</span>
 
     
   
