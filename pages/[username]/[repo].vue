@@ -28,6 +28,13 @@ const caseTitle = ref('');
 const caseType = ref('');
 const caseDate = ref('');
 const tags = ref([]); // Tags for the court ruling
+const rechtsgrundlagen = ref([]);
+const spruchkörper = ref('');
+const ecli = ref('');
+const fundstelle = ref('');
+const lastUpdated = ref('');
+const vorinstanz = ref([]);
+const nachfolgend = ref([]);
 
 // Fetch the ruling based on the route parameters
 const fetchRuling = async () => {
@@ -43,7 +50,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, aktenzeichen_display, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, fundstelle, vorinstanz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -62,7 +69,14 @@ const fetchRuling = async () => {
     caseTitle.value = data.title;
     caseType.value = data.type;
     caseDate.value = new Date(data.date).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+    lastUpdated.value = new Date(data.last_updated).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
     tags.value = data.tags || []; 
+    rechtsgrundlagen.value = data.rechtsgrundlagen || [];
+    spruchkörper.value = data.spruchkörper || '';
+    ecli.value = data.ecli || '';
+    fundstelle.value = data.fundstelle || '';
+    vorinstanz.value = data.vorinstanz || [];
+    nachfolgend.value = data.nachfolgend || [];
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
@@ -189,36 +203,41 @@ const links = [
       <table class="mt-3 table-auto">
         <tr>
           <td class="pr-8">Rechtsgrundlagen</td>
-          <td class="text-slate-400">.wdwadw..</td>
+            <td class="text-slate-400">{{ rechtsgrundlagen.join(', ') }}</td>
         </tr>
         <tr>
           <td class="pr-8">Spruchkörper</td>
-          <td class="text-slate-400">.wdwadw..</td>
+          <td class="text-slate-400">{{ spruchkörper }}</td>
         </tr>
         <tr>
           <td class="">ECLI</td>
-          <td class="text-slate-400">ECLI:DE:OLGCE:2023:0224.9W16.23.00</td>
+          <td class="text-slate-400">{{ ecli }}</td>
         </tr>
         <tr>
           <td class="">Fundstelle</td>
-          <td class="text-slate-400">XXX</td>
+          <td class="text-slate-400">{{ fundstelle }}</td>
         </tr>
       </table>
-      <div class="2xl:w-1/6">
+      <div class="2xl:w-1/6" v-if = "vorinstanz.length > 0">
       <div class="my-2 p-2 bg-slate-100 rounded-md">
         <div class="text-sm font-semibold">Vorinstanz</div>
         <div class="text-sm font-semibold text-slate-400">GERID/AZ</div>
       </div>
         </div>
+        <div class="2xl:w-1/6" v-if = "nachfolgend.length > 0">
+      <div class="my-2 p-2 bg-slate-100 rounded-md">
+        <div class="text-sm font-semibold">Nachfolgend</div>
+        <div class="text-sm font-semibold text-slate-400">{{ nachfolgend.join(', ') }}</div>
+      </div>
+        </div>
 
     </div>
-    
   
   
   </div>
 
 
-  <div class="px-8 pt-2 font-normal text-gray-400 text-sm"><a href="google.com">zuletzt aktualisiert am</a></div>
+  <div class="px-8 pt-2 font-normal text-gray-400 text-sm"><a href="google.com">Zuletzt aktualisiert am {{ lastUpdated }}</a></div>
 
   
   </div>
@@ -271,18 +290,40 @@ const links = [
   <div class="w-full xl:w-3/5 px-4">
     <!-- Main center content here -->
     <div class="border-slate-100 rounded-2xl mt-5">
-      <div class="flex justify-start bg-slate-100  text-sm pl-5 py-3 rounded-tl-2xl rounded-tr-2xl"> 
+      <div class="flex justify-between bg-sky-100  text-sm pl-5 py-3 rounded-tl-2xl rounded-tr-2xl"> 
+        <div class="flex items-center">
         <UAvatar
       size="3xs"
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Deutscher_Bundestag_logo.svg/800px-Deutscher_Bundestag_logo.svg.png"
+      src="https://www.baywidi.de/wp-content/uploads/2020/05/cropped-BayWiDI_ICON_A3-1.png"
       alt="Avatar"
-      class="pt-1"
+      class=""
     />
-    <span class="font-semibold pr-4 ml-4">Bundestag</span>
-    Rentenreform zur Beschleunigung der viele..<span class="pl-5 text-slate-400">27 Days ago</span>
+    <span class="font-semibold pr-4 ml-4">Redaktionelle Einordnung</span></div>
+    <span class="pr-5 text-slate-400">vom</span>
   
-<span class="pl-5"><UIcon name="i-heroicons-arrow-path" class="w-3 h-3" /></span><span class="pl-2 font-semibold">53 Gesetzesänderungen</span></div>
-     <GesetzesText />
+</div>
+<div class="flex justify-between bg-sky-100  text-sm pl-5 py-3 mt-5 rounded-tl-2xl rounded-tr-2xl"> 
+        <div class="flex items-center">
+        <UAvatar
+      size="3xs"
+      src="https://www.baywidi.de/wp-content/uploads/2020/05/cropped-BayWiDI_ICON_A3-1.png"
+      alt="Avatar"
+      class=""
+    />
+    <span class="font-semibold pr-4 ml-4">LLM-generierte Felder</span></div>
+    <span class="pr-5 text-slate-400">vom</span>
+  
+</div>
+
+<div class="pl-6 pt-4 pr-6 text-sm" >
+
+
+<div class="text-2xl font-semibold text-slate-600 mb-2">I. Tenor</div>
+<span>wdadw</span>
+
+</div>
+
+
     </div>
   </div>
 
