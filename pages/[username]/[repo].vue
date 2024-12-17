@@ -182,9 +182,21 @@ const links = [
         </UButton>
       </div>
 
-    <div class="font-semibold pb-1">About</div>
+    <div class="font-semibold pb-1">Leitsatz</div>
 
-    <div class="text-md 2xl:w-3/5 line-clamp-3">With the rapid development of artificial intelligence technology, large language models (LLMs) have made significant progress in fields such as natural language processing, computer vision, and scientific tasks. However, as the scale of these models increases, optimizing resource consumption while maintaining high performance has become a key challenge. </div>
+    <div class="text-md 2xl:w-3/5 line-clamp-3">...</div>
+    <div class="text-md">
+      <table class="mt-3 table-auto">
+        <tr>
+          <td class="pr-8">Rechtsgrundlagen</td>
+          <td class="text-slate-400">.wdwadw..</td>
+        </tr>
+        <tr>
+          <td class="">ECLI</td>
+          <td class="text-slate-400">ECLI:DE:OLGCE:2023:0224.9W16.23.00</td>
+        </tr>
+      </table>
+    </div>
     
   
   
