@@ -4,7 +4,7 @@ useHead({
   title: 'Rechtsprechungsdatenbank',
 });
 
-import { ref, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { createClient } from '@supabase/supabase-js';
 
 // Initialize Supabase client
@@ -13,9 +13,10 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Reactive data for court rulings and tags
-const rulings = ref([]);
-const featuredRepos = ref([]);
-const uniqueTags = ref([]); // Reactive array for unique tags
+const rulings = ref([]); // All rulings
+const featuredRepos = ref([]); // Filtered rulings
+const uniqueTags = ref([]); // All unique tags
+const selectedTags = ref([]); // Tags selected by the user
 
 // Fetch court rulings and tags
 const fetchRulingsAndTags = async () => {
@@ -36,23 +37,44 @@ const fetchRulingsAndTags = async () => {
     const allTags = data.flatMap(ruling => ruling.tags || []); // Combine all tags into a single array
     uniqueTags.value = [...new Set(allTags)]; // Deduplicate tags and assign to uniqueTags
 
-    // Map the fetched data to the featuredRepos format
+    // Initially, show all rulings in featuredRepos
     featuredRepos.value = rulings.value.map(ruling => ({
       owner: ruling.gerichte.gericht_abk_display || ruling.gerichte.gericht_name || 'Unknown Court', // Court abbreviation or name
       name: ruling.aktenzeichen_display || ruling.aktenzeichen || 'Unknown Case', // Aktenzeichen or display field
       about: ruling.title || 'N/A', // Description combining category and type
       to: `/${ruling.gerichte.gericht_abk}/${ruling.aktenzeichen}`, // Generate a dynamic link based on ruling ID
       avatar: ruling.gerichte.gericht_logo || 'https://via.placeholder.com/150', // Court logo or placeholder image
+      tags: ruling.tags || [], // Include tags for filtering
     }));
   } catch (err) {
     console.error('Unexpected error:', err);
   }
 };
 
+// Function to toggle a tag selection
+const toggleTag = (tag) => {
+  if (selectedTags.value.includes(tag)) {
+    selectedTags.value = selectedTags.value.filter(t => t !== tag); // Remove the tag
+  } else {
+    selectedTags.value.push(tag); // Add the tag
+  }
+};
+
+// Computed property to filter rulings based on selected tags
+const filteredRulings = computed(() => {
+  if (selectedTags.value.length === 0) {
+    return featuredRepos.value; // No tags selected, show all rulings
+  }
+  return featuredRepos.value.filter(repo =>
+    selectedTags.value.every(tag => repo.tags.includes(tag))
+  ); // Show rulings matching all selected tags
+});
+
 // Automatically fetch data when the component mounts
 onMounted(fetchRulingsAndTags);
 
 </script>
+
 
 
 
@@ -74,14 +96,14 @@ onMounted(fetchRulingsAndTags);
       :key="index"
       size="xl"
       variant="soft"
-      :to="`/tags/${tag}`" 
-      class="bg-slate-100"
+      :class="{'bg-blue-500 text-white': selectedTags.includes(tag), 'bg-slate-100': !selectedTags.includes(tag)}"
+      @click="toggleTag(tag)"
     >
       {{ tag }}
     </UButton>
   </div>
   
-  <!-- Featured Repos Section -->
+  <!-- Filtered Repos Section -->
   <div class="text-4xl rounded-lg mt-8">
     Alle Urteile
   </div>
@@ -90,7 +112,7 @@ onMounted(fetchRulingsAndTags);
     wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8'
   }">
     <UPageCard
-      v-for="(module, index) in featuredRepos"
+      v-for="(module, index) in filteredRulings"
       :key="index"
       v-bind="module"
       class="pt-20 bg-slate-50 ring-0"
@@ -109,7 +131,8 @@ onMounted(fetchRulingsAndTags);
     </UPageCard>
   </UPageGrid>
   
-  </template>
+</template>
+
   
 
 <style scoped>
