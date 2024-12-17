@@ -4,7 +4,35 @@ useHead({
   title: 'Rechtsprechungsdatenbank',
 })
 
+import { ref, onMounted } from 'vue';
+import { createClient } from '@supabase/supabase-js';
 
+// Initialize Supabase client
+const supabaseUrl = 'https://klehrshrqiyqmwctddjr.supabase.co'; // Replace with your project URL
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtsZWhyc2hycWl5cW13Y3RkZGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODg2MDIsImV4cCI6MjA0ODU2NDYwMn0.BJq9hVM-H2MFccf9v2vByAzrFKhWVvgR5zFEgAg-iVk'; // Replace with your anon key
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// Reactive data for court rulings
+const rulings = ref([]);
+
+// Fetch data when the component is mounted
+const fetchRulings = async () => {
+  try {
+    const { data, error } = await supabase
+      .from('court_rulings')
+      .select('*, courts(court_name)');
+    if (error) {
+      console.error('Error fetching data:', error);
+    } else {
+      rulings.value = data; // Update reactive property
+    }
+  } catch (err) {
+    console.error('Unexpected error:', err);
+  }
+};
+
+// Automatically fetch data when the component mounts
+onMounted(fetchRulings);
 
 const featuredRepos = [{
   owner: 'mibressler',
@@ -28,9 +56,9 @@ const featuredRepos = [{
 <div class="pb-10 pt-10">
 
   <ULandingGrid>
-    <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="Privatrecht" description="Choose a primary and a gray color from your Tailwind CSS color palette." color="blue"/>
-    <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Öffentliches Recht" description="Change the style of any component in your App Config or with ui prop." color="blue"/>
-    <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Strafrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue" />
+    <ULandingCard class="col-span-6 row-span-4" icon="i-heroicons-swatch" title="IT-Sicherheitsrecht" description="Choose a primary and a gray color from your Tailwind CSS color palette." color="blue"/>
+    <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-wrench-screwdriver" title="Internetrecht" description="Change the style of any component in your App Config or with ui prop." color="blue"/>
+    <ULandingCard class="col-span-6 row-span-2" icon="i-heroicons-face-smile" title="Datenschutzrecht" description="Choose any of the 100k+ icons from the most popular icon libraries." color="blue" />
   </ULandingGrid>
 </div>
 <UIcon name="i-heroicons-folder-open" class="w-5 h-5 mb-4 mt-5 text-slate-400" />
@@ -51,7 +79,7 @@ const featuredRepos = [{
 </div>
 
 <div class="text-4xl rounded-lg mt-8">
-        Urteile
+        Alle Urteile
       </div>
 
       <UPageGrid class="pt-7 pb-10" :ui="{
