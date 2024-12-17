@@ -74,8 +74,8 @@ class="no-border group"
 
     <template #left>
 
-      <a href="/"><Logo size="xs" class="opacity-60" /></a>
-        <div class="hover:bg-slate-50 hover:rounded px-1 mb-1 font-semibold">Openparl</div>
+      <a href="/"><Logo size="xs" class="" /></a>
+        <div class="hover:bg-slate-50 hover:rounded px-1 mb-1 font-semibold">Rechtsprechungsdatenbank</div>
   
   
 
