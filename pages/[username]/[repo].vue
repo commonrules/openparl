@@ -26,19 +26,30 @@ const md = new MarkdownIt({
   linkify: true, // Auto-detect URLs and make them links
   typographer: true, // Enable smart quotes and other typographic enhancements
 }).use((md) => {
-  // Plugin to add TailwindCSS classes to h1 and h2
+  // Plugin to add TailwindCSS classes to h1, h2, h3
   md.renderer.rules.heading_open = (tokens, idx) => {
-  const level = tokens[idx].tag; // e.g., h1, h2, etc.
-  const tailwindClass = {
-    h1: 'text-4xl font-bold mt-8',
-    h2: 'text-3xl font-semibold mt-6',
-    h3: 'text-2xl font-medium mt-4',
-  }[level] || '';
-  return `<${level} class="${tailwindClass}">`;
-};
+    const level = tokens[idx].tag; // e.g., h1, h2, etc.
+    const tailwindClass = {
+      h1: 'text-3xl font-bold mt-6 mb-2', // Less space beneath
+      h2: 'text-2xl font-semibold mt-4 mb-1', // Less space beneath
+      h3: 'text-xl font-medium mt-3 mb-1', // Less space beneath
+    }[level] || '';
+    return `<${level} class="${tailwindClass}">`;
+  };
 
-md.renderer.rules.paragraph_open = () => '<p class="text-base text-gray-700 leading-relaxed">';
+  // Plugin to add TailwindCSS classes to paragraphs
+  md.renderer.rules.paragraph_open = () =>
+    '<div class="text-base text-gray-700 leading-relaxed">';
 
+  // Plugin to add TailwindCSS classes to unordered and ordered lists
+  md.renderer.rules.bullet_list_open = () =>
+    '<ul class="list-disc ml-0">'; // Remove `space-y` completely
+  md.renderer.rules.ordered_list_open = () =>
+    '<ol class="list-decimal ml-0">'; // Remove `space-y` completely
+
+  // Plugin to add TailwindCSS classes to list items
+  md.renderer.rules.list_item_open = () =>
+    '<li class="text-gray-700 leading-tight -mb-2">'; // Tighten spacing with `leading-tight` and `mb-1`
 });
 
 
