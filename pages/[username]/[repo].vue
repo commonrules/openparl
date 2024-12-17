@@ -76,6 +76,7 @@ const thema = ref("");
 const redaktion_text = ref("");
 const aigenerated_text = ref("");
 const redaktion_last_updated = ref("");
+const aigenerated_last_updated = ref("");
 
 // Fetch the ruling based on the route parameters
 const fetchRuling = async () => {
@@ -91,7 +92,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, aigenerated_text, redaktion_last_updated, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, aigenerated_text, aigenerated_last_updated, redaktion_last_updated, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -123,6 +124,7 @@ const fetchRuling = async () => {
     redaktion_text.value = data.redaktion_text || '';
     aigenerated_text.value = data.aigenerated_text || '';
     redaktion_last_updated.value = new Date(data.redaktion_last_updated).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+    aigenerated_last_updated.value = new Date(data.aigenerated_last_updated).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
