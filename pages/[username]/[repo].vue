@@ -251,25 +251,25 @@ const links = [
     <div v-if="leitsatz.length > 0" class="text-md 2xl:w-3/5 line-clamp-3"> {{ leitsatz }}</div>
 
     
-    <div v-if="thema.length > 0" class="font-semibold pb-1">Behandelt</div>
+    <div v-if="thema.length > 0" class="font-semibold pb-1">Gegenstand</div>
 
     <div v-if="thema.length > 0" class="text-md 2xl:w-3/5 line-clamp-3"> {{ thema }}</div>
 
     <div class="text-md">
       <table class="mt-3 table-auto">
-        <tr>
+        <tr v-if="rechtsgrundlagen.length > 0">
           <td class="pr-8">Rechtsgrundlagen</td>
             <td class="text-slate-400">{{ rechtsgrundlagen.join(', ') }}</td>
         </tr>
-        <tr>
+        <tr v-if="spruchkörper">
           <td class="pr-8">Spruchkörper</td>
           <td class="text-slate-400">{{ spruchkörper }}</td>
         </tr>
-        <tr>
+        <tr v-if="ecli">
           <td class="">ECLI</td>
           <td class="text-slate-400">{{ ecli }}</td>
         </tr>
-        <tr>
+        <tr v-if="fundstelle">
           <td class="">Fundstelle</td>
           <td class="text-slate-400">{{ fundstelle }}</td>
         </tr>
