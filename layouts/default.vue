@@ -16,8 +16,8 @@ import Logo from '~/components/Logo.vue';
         <div class="w-5/6">
             <div class="flex justify-between">
                 <div class="w-5/6 mr-10">
-                  <Logo size="sm" class="pb-5" />
-            <Search class="" /> 
+                  <Logo size="sm" class="" />
+            <Search class="mt-8" /> 
             <slot />
         </div>
 
