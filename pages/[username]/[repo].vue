@@ -267,10 +267,12 @@ const links = [
         </tr>
       </table>
       <div class="2xl:w-1/6" v-if = "vorinstanz.length > 0">
+        <ULink :to="'/'+ nachfolgend[0]">
       <div class="my-2 p-2 bg-slate-100 rounded-md">
         <div class="text-sm font-semibold">Vorinstanz</div>
         <div class="text-sm font-semibold text-slate-400">GERID/AZ</div>
       </div>
+      </ULink>
         </div>
         <div class="2xl:w-1/6" v-if = "nachfolgend.length > 0">
           <ULink :to="'/'+ nachfolgend[0]">
