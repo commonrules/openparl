@@ -22,7 +22,7 @@ const fetchRulings = async () => {
     // Fetch data from baywidi_urteile and include related data from gerichte
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, aktenzeichen_display, category, date, tags, title, type, gerichte(gericht_name, gericht_logo, gericht_abk_display)');
+      .select('id, aktenzeichen, aktenzeichen_display, category, date, tags, title, type, gerichte(gericht_name, gericht_logo, gericht_abk, gericht_abk_display)');
     
     if (error) {
       console.error('Error fetching data:', error);
@@ -36,7 +36,7 @@ const fetchRulings = async () => {
       owner: ruling.gerichte.gericht_abk_display || ruling.gerichte.gericht_name || 'Unknown Court', // Court abbreviation or name
       name: ruling.aktenzeichen_display || ruling.aktenzeichen || 'Unknown Case', // Aktenzeichen or display field
       about: ruling.title || 'N/A', // Description combining category and type
-      to: `/details/${ruling.id}`, // Generate a dynamic link based on ruling ID
+      to: `/${ruling.gerichte.gericht_abk}/${ruling.aktenzeichen}`, // Generate a dynamic link based on ruling ID
       avatar: ruling.gerichte.gericht_logo || 'https://via.placeholder.com/150', // Court logo or placeholder image
     }));
   } catch (err) {
