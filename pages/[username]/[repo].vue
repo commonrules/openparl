@@ -74,6 +74,7 @@ const nachfolgend = ref([]);
 const leitsatz = ref([]);
 const thema = ref("");
 const redaktion_text = ref("");
+const aigenerated_text = ref("");
 const redaktion_last_updated = ref("");
 
 // Fetch the ruling based on the route parameters
@@ -90,7 +91,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, redaktion_last_updated, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, aigenerated_text, redaktion_last_updated, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -120,6 +121,7 @@ const fetchRuling = async () => {
     leitsatz.value = data.leitsatz || [];
     thema.value = data.thema || '';
     redaktion_text.value = data.redaktion_text || '';
+    aigenerated_text.value = data.aigenerated_text || '';
     redaktion_last_updated.value = new Date(data.redaktion_last_updated).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
@@ -344,7 +346,8 @@ const links = [
   <div class="w-full xl:w-3/5 px-4">
     <!-- Main center content here -->
     <div class="border-slate-100 rounded-2xl mt-5">
-      <div class="flex justify-between bg-sky-100  text-sm pl-5 py-3 rounded-tl-2xl rounded-tr-2xl"> 
+      <div v-if="redaktion_text" class="bg-sky-100 mt-5 text-sm pl-5 py-3 rounded-tl-2xl rounded-tr-2xl"> 
+        <div class="flex justify-between">
         <div class="flex items-center">
         <UAvatar
       size="3xs"
@@ -355,20 +358,20 @@ const links = [
     <span class="font-semibold pr-4 ml-4">Redaktionelle Einordnung</span></div>
     <span class="pr-5 text-slate-400">vom {{ redaktion_last_updated }}</span>
 
-    
-  
-</div>
-
-<!-- Markdown Section -->
-<div v-if="redaktion_text" class="px-8 mt-6 prose prose-lg dark:prose-invert">
+    </div>
+    <!-- Markdown Section -->
+<div v-if="redaktion_text" class="px-2 my-6 prose prose-lg dark:prose-invert">
       <div v-html="md.render(redaktion_text)"></div>
     </div>
 
     <div v-else class="px-8 mt-6 text-gray-500 dark:text-gray-400">
       No additional content available.
     </div>
+  
+</div>
 
-<div class="flex justify-between bg-sky-100  text-sm pl-5 py-3 mt-5 rounded-tl-2xl rounded-tr-2xl"> 
+<div v-if="aigenerated_text" class="bg-green-100 mt-5 text-sm pl-5 py-3 rounded-tl-2xl rounded-tr-2xl"> 
+        <div class="flex justify-between">
         <div class="flex items-center">
         <UAvatar
       size="3xs"
@@ -376,8 +379,18 @@ const links = [
       alt="Avatar"
       class=""
     />
-    <span class="font-semibold pr-4 ml-4">LLM-generierte Felder</span></div>
-    <span class="pr-5 text-slate-400">vom</span>
+    <span class="font-semibold pr-4 ml-4">LLM-generierte Einordnung</span></div>
+    <span class="pr-5 text-slate-400">vom {{ aigenerated_last_updated }}</span>
+
+    </div>
+    <!-- Markdown Section -->
+<div v-if="aigenerated_text" class="px-2 my-6 prose prose-lg dark:prose-invert">
+      <div v-html="md.render(aigenerated_text)"></div>
+    </div>
+
+    <div v-else class="px-8 mt-6 text-gray-500 dark:text-gray-400">
+      No additional content available.
+    </div>
   
 </div>
 
