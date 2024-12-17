@@ -97,7 +97,7 @@ const links = [
   icon: 'i-heroicons-book-open',
   to: route.path,
 }, ], [{
-    label: caseDate,
+    label: '',
     labelClass: 'font-normal'
   },{
     icon: 'i-heroicons-ellipsis-vertical'
