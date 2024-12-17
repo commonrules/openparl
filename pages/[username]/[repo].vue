@@ -11,11 +11,36 @@ definePageMeta({
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { createClient } from '@supabase/supabase-js';
+import MarkdownIt from 'markdown-it';
 
 // Initialize Supabase client
 const supabaseUrl = 'https://klehrshrqiyqmwctddjr.supabase.co';
 const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtsZWhyc2hycWl5cW13Y3RkZGpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzI5ODg2MDIsImV4cCI6MjA0ODU2NDYwMn0.BJq9hVM-H2MFccf9v2vByAzrFKhWVvgR5zFEgAg-iVk';
 const supabase = createClient(supabaseUrl, supabaseKey);
+
+
+// Markdown renderer instance with customization
+const md = new MarkdownIt({
+  html: true,
+  breaks: true,
+  linkify: true, // Auto-detect URLs and make them links
+  typographer: true, // Enable smart quotes and other typographic enhancements
+}).use((md) => {
+  // Plugin to add TailwindCSS classes to h1 and h2
+  md.renderer.rules.heading_open = (tokens, idx) => {
+  const level = tokens[idx].tag; // e.g., h1, h2, etc.
+  const tailwindClass = {
+    h1: 'text-4xl font-bold mt-8',
+    h2: 'text-3xl font-semibold mt-6',
+    h3: 'text-2xl font-medium mt-4',
+  }[level] || '';
+  return `<${level} class="${tailwindClass}">`;
+};
+
+md.renderer.rules.paragraph_open = () => '<p class="text-base text-gray-700 leading-relaxed">';
+
+});
+
 
 // Extract the route and initialize reactive properties
 const route = useRoute();
@@ -37,6 +62,7 @@ const vorinstanz = ref([]);
 const nachfolgend = ref([]);
 const leitsatz = ref([]);
 const thema = ref("");
+const redaktion_text = ref("");
 
 // Fetch the ruling based on the route parameters
 const fetchRuling = async () => {
@@ -52,7 +78,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, fundstelle, vorinstanz, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -81,6 +107,7 @@ const fetchRuling = async () => {
     nachfolgend.value = data.nachfolgend || [];
     leitsatz.value = data.leitsatz || [];
     thema.value = data.thema || '';
+    redaktion_text.value = data.redaktion_text || '';
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
@@ -310,8 +337,20 @@ const links = [
     />
     <span class="font-semibold pr-4 ml-4">Redaktionelle Einordnung</span></div>
     <span class="pr-5 text-slate-400">vom</span>
+
+    
   
 </div>
+
+<!-- Markdown Section -->
+<div v-if="redaktion_text" class="px-8 mt-6 prose prose-lg dark:prose-invert">
+      <div v-html="md.render(redaktion_text)"></div>
+    </div>
+
+    <div v-else class="px-8 mt-6 text-gray-500 dark:text-gray-400">
+      No additional content available.
+    </div>
+
 <div class="flex justify-between bg-sky-100  text-sm pl-5 py-3 mt-5 rounded-tl-2xl rounded-tr-2xl"> 
         <div class="flex items-center">
         <UAvatar
