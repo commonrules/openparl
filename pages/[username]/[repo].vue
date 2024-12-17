@@ -77,6 +77,7 @@ const redaktion_text = ref("");
 const aigenerated_text = ref("");
 const redaktion_last_updated = ref("");
 const aigenerated_last_updated = ref("");
+const entscheidungs_text = ref("");
 
 // Fetch the ruling based on the route parameters
 const fetchRuling = async () => {
@@ -92,7 +93,7 @@ const fetchRuling = async () => {
     // Query Supabase for the specific ruling
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, aigenerated_text, aigenerated_last_updated, redaktion_last_updated, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
+      .select('id, aktenzeichen, fundstelle, vorinstanz, redaktion_text, entscheidungs_text, aigenerated_text, aigenerated_last_updated, redaktion_last_updated, thema, leitsatz, nachfolgend, last_updated, aktenzeichen_display, spruchkörper, ecli, rechtsgrundlagen, title, date, type, tags, gerichte(gericht_abk, gericht_abk_display, gericht_name, gericht_logo)')
       .eq('gerichte.gericht_abk', courtAbk)
       .eq('aktenzeichen', aktenzeichen)
       .single();
@@ -125,6 +126,7 @@ const fetchRuling = async () => {
     aigenerated_text.value = data.aigenerated_text || '';
     redaktion_last_updated.value = new Date(data.redaktion_last_updated).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
     aigenerated_last_updated.value = new Date(data.aigenerated_last_updated).toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+    entscheidungs_text.value = data.entscheidungs_text || '';
   } catch (err) {
     errorMessage.value = 'An error occurred while fetching the ruling.';
     console.error(err);
@@ -396,11 +398,15 @@ const links = [
   
 </div>
 
-<div class="pl-6 pt-4 pr-6 text-sm" >
+<div class="px-2 pt-0" >
+<!-- Markdown Section -->
+<div v-if="entscheidungs_text" class="px-2 my-6 prose prose-lg dark:prose-invert">
+      <div v-html="md.render(entscheidungs_text)"></div>
+    </div>
 
-
-<div class="text-2xl font-semibold text-slate-600 mb-2">I. Tenor</div>
-<span>wdadw</span>
+    <div v-else class="px-8 mt-6 text-gray-500 dark:text-gray-400">
+      No additional content available.
+    </div>
 
 </div>
 
