@@ -22,7 +22,7 @@ const fetchRulings = async () => {
     // Fetch data from baywidi_urteile and include related data from gerichte
     const { data, error } = await supabase
       .from('baywidi_urteile')
-      .select('id, aktenzeichen, aktenzeichen_display, category, date, tags, type, gerichte(gericht_name, gericht_logo, gericht_abk_display)');
+      .select('id, aktenzeichen, aktenzeichen_display, category, date, tags, title, type, gerichte(gericht_name, gericht_logo, gericht_abk_display)');
     
     if (error) {
       console.error('Error fetching data:', error);
@@ -35,7 +35,7 @@ const fetchRulings = async () => {
     featuredRepos.value = rulings.value.map(ruling => ({
       owner: ruling.gerichte.gericht_abk_display || ruling.gerichte.gericht_name || 'Unknown Court', // Court abbreviation or name
       name: ruling.aktenzeichen_display || ruling.aktenzeichen || 'Unknown Case', // Aktenzeichen or display field
-      about: `Category: ${ruling.category || 'N/A'}, Type: ${ruling.type || 'N/A'}`, // Description combining category and type
+      about: ruling.title || 'N/A', // Description combining category and type
       to: `/details/${ruling.id}`, // Generate a dynamic link based on ruling ID
       avatar: ruling.gerichte.gericht_logo || 'https://via.placeholder.com/150', // Court logo or placeholder image
     }));
@@ -82,7 +82,7 @@ onMounted(fetchRulings);
       </div>
 
       <UPageGrid class="pt-7 pb-10" :ui="{
-  wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-6 gap-8'
+  wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-8'
 }">
     <UPageCard v-for="(module, index) in featuredRepos" :key="index" v-bind="module" class="pt-20 bg-slate-50 ring-0">
       <div>
@@ -91,10 +91,10 @@ onMounted(fetchRulings);
       <div>
         <span class="font-normal">{{ module.owner }}</span>
 
-        <span> &nbsp;{{ module.nopreprint }}</span> <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
+        <span class="pl-1">/</span> <span class="line-clamp-2 font-semibold text-lg">{{ module.name }}</span>
       </div>
       <div>
-        <span class="mt-2 line-clamp-2 text-slate-500 text-sm">{{ module.about }}</span>
+        <span class="mt-2 line-clamp-3 text-slate-500 text-sm">{{ module.about }}</span>
       </div>
   
     </UPageCard>
