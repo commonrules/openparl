@@ -73,7 +73,7 @@ const fetchRuling = async () => {
 onMounted(fetchRuling);
 
 useHead({
-  title: 'Bundestag / GG',
+  title: courtName.value,
 })
 
 
