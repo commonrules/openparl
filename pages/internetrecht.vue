@@ -25,7 +25,7 @@ const fetchRulingsAndTags = async () => {
     const { data, error } = await supabase
       .from('baywidi_urteile')
       .select('id, aktenzeichen, aktenzeichen_display, category, date, tags, title, type, gerichte(gericht_name, gericht_logo, gericht_abk, gericht_abk_display)')
-      .eq('category', 'IT-Sicherheitsrecht'); // Filter by category
+      .eq('category', 'Internetrecht'); // Filter by category
 
     if (error) {
       console.error('Error fetching data:', error);
@@ -99,7 +99,7 @@ onMounted(fetchRulingsAndTags);
   
   <!-- Filtered Repos Section -->
   <div class="text-4xl rounded-lg mt-8">
-    Alle Urteile aus dem IT-Sicherheitsrecht
+    Alle Urteile aus dem Internetrecht
   </div>
   
   <UPageGrid class="pt-7 pb-10" :ui="{
